@@ -10,6 +10,11 @@ namespace TrabalhoGrupoMecanica
     {
         static void Main(string[] args)
         {
+            new Sistema();
+
+          
+
+           
         }
     }
 }
