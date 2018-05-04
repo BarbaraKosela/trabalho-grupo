@@ -46,7 +46,7 @@ namespace TrabalhoGrupoMecanica
                         Console.Clear();
                         Console.WriteLine(@"1 - Cadastrar carro: 
 2 - Editar Carro
-3- Listar carro
+3 - Listar carro
 4 - Buscar carro 
 5 - Sair");
 
