@@ -62,63 +62,63 @@ namespace TrabalhoGrupoMecanica
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
-                            switch (escolhaMenu)
-                            {
-                                                               
-                                    case 1:
-                                    menuCarro.CadastrarCarro();
-                                    break;
-                                case 2:
-                                    menuCarro.ListarCarros();
-                                    break;
-                        
-                                case 3:
-                                    menuCarro.ListarCarros();
-                                    break;
-                                case 4:
-                                    menuCarro.BuscarCarro();
-                                    break;
-                                case 5:
-                                    menuCarro.TotalCarros();
-                                    break;
-                                case 6:
-                                    menuCarro.MediaPrecoCarros();
-                                    break;
-                                case 7:
-                                    menuCarro.MediaAnosCarros();
-                                    break;
-                                case 8:
-                                    menuCarro.MediaPesosCarros();
-                                    break;
-                                case 9:
-                                    menuCarro.CarroComMaiorPreco();
-                                    break;
-                                case 10:
-                                    menuCarro.CarroMaiorAnoFabricacao();
-                                    break;
-                                case 11:
-                                    menuCarro.CarroComMaiorPeso();
-                                    break;
-                                case 12:
-                                    menuCarro.CarroComMenorPreco();
-                                    break;
-                                case 13:
-                                    menuCarro.CarroComMenorAnoFabricacao();
-                                    break;
-                                case 14:
-                                    menuCarro.CarroComMenorPeso();
-                                    break;
-                                case 15:
-                                    menuCarro.ApagarMenu();
-                                    break;
+                        switch (escolhaMenu)
+                        {
 
-                       }
+                            case 1:
+                                menuCarro.CadastrarCarro();
+                                break;
+                            case 2:
+                                menuCarro.ListarCarros();
+                                break;
 
- 
+                            case 3:
+                                menuCarro.ListarCarros();
+                                break;
+                            case 4:
+                                menuCarro.BuscarCarro();
+                                break;
+                            case 5:
+                                menuCarro.TotalCarros();
+                                break;
+                            case 6:
+                                menuCarro.MediaPrecoCarros();
+                                break;
+                            case 7:
+                                menuCarro.MediaAnosCarros();
+                                break;
+                            case 8:
+                                menuCarro.MediaPesosCarros();
+                                break;
+                            case 9:
+                                menuCarro.CarroComMaiorPreco();
+                                break;
+                            case 10:
+                                menuCarro.CarroMaiorAnoFabricacao();
+                                break;
+                            case 11:
+                                menuCarro.CarroComMaiorPeso();
+                                break;
+                            case 12:
+                                menuCarro.CarroComMenorPreco();
+                                break;
+                            case 13:
+                                menuCarro.CarroComMenorAnoFabricacao();
+                                break;
+                            case 14:
+                                menuCarro.CarroComMenorPeso();
+                                break;
+                            case 15:
+                                menuCarro.ApagarMenu();
+                                break;
 
-                       
-                            break;
-                    case 2: 
+                        }
+
+
+
+
+                        break;
+                    case 2:
                         break;
                     case 3:
                         break;
@@ -142,70 +142,140 @@ namespace TrabalhoGrupoMecanica
 15 - Sair");
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        
-                            switch (escolhaMenu)
-                            {
-                                case 1:
-                                    menuAviao.CadastrarAviao();
-                                    break;
-                                case 2:
-                                    menuAviao.EditarAviao();
-                                    break;
-                        
-                                case 3:
-                                    menuAviao.ListarAvioes();
-                                    break;
-                                case 4:
-                                    menuAviao.BuscarAviao();
-                                    break;
-                                case 5:
-                                    menuAviao.TotalAvioes();
-                                    break;
-                                case 6:
-                                    menuAviao.MediaPrecoAviao();
-                                    break;
-                                case 7:
-                                    menuAviao.MediaAnosCarros();
-                                    break;
-                                case 8:
-                                    menuAviao.MediaPesosAviao();
-                                    break;
-                                case 9:
-                                    menuAviao.AviaoComMaiorPreco();
-                                    break;
-                                case 10:
-                                    menuAviao.AviaoMaiorAnoFabricacao();
-                                    break;
-                                case 11:
-                                    menuAviao.AviaoComMaiorPeso();
-                                    break;
-                                case 12:
-                                    menuAviao.AviaoComMenorPreco();
-                                    break;
-                                case 13:
-                                    menuAviao.AviaoComMenorAnoFabricacao();
-                                    break;
-                                case 14:
-                                    menuAviao.AviaoComMenorPeso();
-                                    break;
-                                case 15:
-                                    Console.Clear();
-                                    break;
+
+                        switch (escolhaMenu)
+                        {
+                            case 1:
+                                menuAviao.CadastrarAviao();
+                                break;
+                            case 2:
+                                menuAviao.EditarAviao();
+                                break;
+
+                            case 3:
+                                menuAviao.ListarAvioes();
+                                break;
+                            case 4:
+                                menuAviao.BuscarAviao();
+                                break;
+                            case 5:
+                                menuAviao.TotalAvioes();
+                                break;
+                            case 6:
+                                menuAviao.MediaPrecoAviao();
+                                break;
+                            case 7:
+                                menuAviao.MediaAnosCarros();
+                                break;
+                            case 8:
+                                menuAviao.MediaPesosAviao();
+                                break;
+                            case 9:
+                                menuAviao.AviaoComMaiorPreco();
+                                break;
+                            case 10:
+                                menuAviao.AviaoMaiorAnoFabricacao();
+                                break;
+                            case 11:
+                                menuAviao.AviaoComMaiorPeso();
+                                break;
+                            case 12:
+                                menuAviao.AviaoComMenorPreco();
+                                break;
+                            case 13:
+                                menuAviao.AviaoComMenorAnoFabricacao();
+                                break;
+                            case 14:
+                                menuAviao.AviaoComMenorPeso();
+                                break;
+                            case 15:
+                                Console.Clear();
+                                break;
 
 
                         }
 
-                        
+
                         break;
-                    case 5: 
-                        break;
-                    case 6:
-                        
+                    case 5:
                         break;
 
+                    case 6:
+
+                        Console.Clear();
+                        Console.WriteLine(@"1 - Cadastrar ônibus
+2 - Editar ônibus
+3 - Listar ônibus
+4 - Buscar ônibus 
+5 - Total
+6 - Média de preço dos ônibus
+7 - Média de anos dos ônibus
+8 - Média de pesos dos ônibus
+9 - ônibus com maior preço
+10 - ônibus com maior ano de fabricação
+11 - ônibus com maior peso
+12 - ônibus com menor preço
+13 - ônibus com menor ano de fabricação
+14 - ônibus com menor peso
+15 - Sair");
+
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+
+                        switch (escolhaMenu)
+                        {
+                            case 1:
+                                menuOnibus.CadastrarOnibus();
+                                break;
+                            case 2:
+                                menuOnibus.EditarOnibus();
+                                break;
+
+                            case 3:
+                                menuOnibus.ListarOnibus();
+                                break;
+                            case 4:
+                                menuOnibus.BuscarOnibus();
+                                break;
+                            case 5:
+                                menuOnibus.TotalOnibus();
+                                break;
+                            case 6:
+                                menuOnibus.MediaPrecoOnibus();
+                                break;
+                            case 7:
+                                menuOnibus.MediaAnosOnibus();
+                                break;
+                            case 8:
+                                menuOnibus.MediaPesosOnibus();
+                                break;
+                            case 9:
+                                menuOnibus.OnibusComMaiorPreco();
+                                break;
+                            case 10:
+                                menuOnibus.OnibusMaiorAnoFabricacao();
+                                break;
+                            case 11:
+                                menuOnibus.OnibusComMaiorPeso();
+                                break;
+                            case 12:
+                                menuOnibus.OnibusComMenorPreco();
+                                break;
+                            case 13:
+                                menuOnibus.OnibusComMenorAnoFabricacao();
+                                break;
+                            case 14:
+                                menuOnibus.OnibusComMenorPeso();
+                                break;
+                            case 15:
+                                Console.Clear();
+                                break;
+
+                        }
+                        break;
+
+                        Menu();
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
                 }
-                Menu();
-                escolhaMenu = Convert.ToInt32(Console.ReadLine());
             }
         }
     }
