@@ -17,6 +17,16 @@ namespace TrabalhoGrupoMecanica
             new menuCarro();
             new menuMoto();
             new menuOnibus();
+
+            /*
+---------------------------------------------------------------------------
+Modelo do carro     | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+Modelo da moto      | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+Modelo da bicicleta | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+Modelo do avião     | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+Modelo do caminhão  | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+Modelo da ônibus    | Ano | Cor | Preço | Peso | Comporta quantas pessoas?|
+--------------------------------------------------------------------------- */
         }
     }
 }
