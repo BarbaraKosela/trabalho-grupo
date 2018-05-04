@@ -7,7 +7,12 @@ namespace TrabalhoGrupoMecanica
 {
     class Sistema
     {
+        menuCarro menuCarro = new menuCarro();
+        menuMoto menuMoto = new menuMoto();
+        menuBicicleta menuBicicleta = new menuBicicleta();
         MenuAviao menuAviao = new MenuAviao();
+        menuCaminhao menuCaminhao = new menuCaminhao();
+        menuOnibus menuOnibus = new menuOnibus();
         public void Menu()
         {
             Console.WriteLine("O que deseja cadastrar?");
