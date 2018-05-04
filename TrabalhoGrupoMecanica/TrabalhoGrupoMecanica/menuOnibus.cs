@@ -17,23 +17,25 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarOnibus()
         {
-            Console.WriteLine("Modelo do ônibus: ");
+            Console.Write("Digite o modelo do ônibus: ");
             onibusModelo[atual] = Console.ReadLine();
 
-            Console.WriteLine("Ano de fabricação: ");
+            Console.Write("Digite o ano de fabricação: ");
             onibusAno[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Cor do ônibus: ");
+            Console.Write("Digite a cor do ônibus: ");
             onibusCor[atual] = Console.ReadLine();
 
-            Console.WriteLine("Preço do ônibus: ");
+            Console.Write("Digite o preço do ônibus: ");
             onibusPreco[atual] = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Peso do ônibus: ");
+            Console.Write("Digite o peso do ônibus: ");
             onibusPeso[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Comporta quantos passageiros? ");
+            Console.Write("Digite quantos passageiros comporta: ");
             onibusPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
 
             atual++;
 
