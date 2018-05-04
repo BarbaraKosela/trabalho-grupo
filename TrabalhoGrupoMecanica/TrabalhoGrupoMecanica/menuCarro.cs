@@ -100,6 +100,9 @@ namespace TrabalhoGrupoMecanica
 
         public void TotalCarros()
         {
+            Console.Clear();
+            int totalCarros = modeloCarros[atual].Length;
+            
             
         }
 
