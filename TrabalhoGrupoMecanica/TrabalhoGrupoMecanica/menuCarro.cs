@@ -16,6 +16,7 @@ namespace TrabalhoGrupoMecanica
         int atual = 0;
         public void CadastrarCarro()
         {
+            Console.Clear();
             Console.WriteLine("Cadastramento de carros");
             Console.Write("Digite o modelo do carro: ");
             modeloCarros[atual] = Console.ReadLine();
@@ -40,6 +41,66 @@ namespace TrabalhoGrupoMecanica
             {
                 Console.WriteLine(String.Format("\nModelos dos carros: {0} \nAnos de Fabricação: {1} \nCores dos carros: {2} \nPreço dos carros: {3} \nPeso dos carros: {4} \nQuantidade de passageiros que comportam dentro do carro: {5}",modeloCarros[i], anoFabricacaoCarros[i], corCarros[i], precoCarros[i], pesoCarros[i], comportaQuantasPessoas[i]));
             }
+        }
+
+        public void EditarCarro()
+        {
+            
+        }
+
+        public void BuscarCarro()
+        {
+            
+        }
+
+        public void TotalCarros()
+        {
+            
+        }
+
+        public void MediaPrecoCarros()
+        {
+            
+        }
+
+        public void MediaAnosCarros()
+        {
+            
+        }
+
+        public void MediaPesosCarros()
+        {
+            
+        }
+
+        public void CarroComMaiorPreco()
+        {
+            
+        }
+
+        public void CarroMaiorAnoFabricacao()
+        {
+            
+        }
+
+        public void CarroComMaiorPeso()
+        {
+            
+        }
+
+        public void CarroComMenorPreco()
+        {
+            
+        }
+
+        public void CarroComMenorAnoFabricacao()
+        {
+            
+        }
+
+        public void CarroComMenorPeso()
+        {
+            
         }
     }
 }
