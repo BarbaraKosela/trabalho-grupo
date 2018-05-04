@@ -61,14 +61,11 @@ namespace TrabalhoGrupoMecanica
 15 - Sair");
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        //while (escolhaMenu != 15)
-                        //{
+
                             switch (escolhaMenu)
                             {
-                                
-                                
-                                
-                                case 1:
+                                                               
+                                    case 1:
                                     menuCarro.CadastrarCarro();
                                     break;
                                 case 2:
@@ -115,10 +112,9 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.ApagarMenu();
                                     break;
 
+                       }
 
-                        }
-
-  //                      }
+ 
 
                         break;
                     case 2: 
