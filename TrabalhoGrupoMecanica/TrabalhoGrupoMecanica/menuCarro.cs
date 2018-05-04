@@ -46,6 +46,36 @@ namespace TrabalhoGrupoMecanica
         public void EditarCarro()
         {
             Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisar: ");
+            string nomePesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomePesquisado == modeloCarros[i])
+                {
+                    posicao = i;
+                }
+            }
+            if (posicao != -1)
+            {
+                Console.WriteLine("Cadastramento de carros");
+                Console.Write("Digite o modelo do carro: ");
+                modeloCarros[posicao] = Console.ReadLine();
+                Console.Write("Digite o ano de fabricação do carro: ");
+                anoFabricacaoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Digite a cor do carro: ");
+                corCarros[posicao] = Console.ReadLine();
+                Console.Write("Digite o preço do carro: ");
+                precoCarros[posicao] = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Digite o peso do carro: ");
+                pesoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Digite quantos passageiros comporta: ");
+                comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+            }
+            else
+            {
+                Console.WriteLine("ERROR 404: Registro não encontrado");
+            }
         }
 
         public void BuscarCarro()
