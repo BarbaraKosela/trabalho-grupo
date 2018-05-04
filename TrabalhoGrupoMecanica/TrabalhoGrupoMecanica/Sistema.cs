@@ -13,6 +13,10 @@ namespace TrabalhoGrupoMecanica
         MenuAviao menuAviao = new MenuAviao();
         menuCaminhao menuCaminhao = new menuCaminhao();
         menuOnibus menuOnibus = new menuOnibus();
+        public Sistema()
+        {
+            GerirMenu();
+        }
         public void Menu()
         {
             Console.WriteLine("O que deseja cadastrar?");
@@ -35,6 +39,7 @@ namespace TrabalhoGrupoMecanica
                 switch (escolhaMenu)
                 {
                     case 1:
+                        menuCarro.CadastrarCarro();
                         break;
                     case 2:
                         break;
