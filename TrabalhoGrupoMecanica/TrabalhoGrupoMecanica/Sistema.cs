@@ -7,6 +7,7 @@ namespace TrabalhoGrupoMecanica
 {
     class Sistema
     {
+        MenuAviao menuAviao = new MenuAviao();
         public void Menu()
         {
             Console.WriteLine("O que deseja cadastrar?");
@@ -35,6 +36,7 @@ namespace TrabalhoGrupoMecanica
                     case 3:
                         break;
                     case 4:
+                        menuAviao.CadastrarAviao();
                         break;
                     case 5:
                         break;
