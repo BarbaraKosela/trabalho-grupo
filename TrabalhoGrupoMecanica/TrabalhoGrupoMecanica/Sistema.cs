@@ -19,7 +19,7 @@ namespace TrabalhoGrupoMecanica
         }
         public void Menu()
         {
-            Console.WriteLine("O que deseja cadastrar?");
+            Console.WriteLine("O que deseja cadastrar?\n");
             Console.WriteLine(@"1 - Cadastrar carros
 2 - Cadastrar motos
 3 - Cadastrar bicicletas
@@ -51,6 +51,7 @@ namespace TrabalhoGrupoMecanica
                     case 5:
                         break;
                     case 6:
+                        menuOnibus.CadastrarOnibus();
                         break;
 
                 }
