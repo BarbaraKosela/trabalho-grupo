@@ -16,7 +16,7 @@ namespace TrabalhoGrupoMecanica
         int atual = 0;
         public void CadastrarCarro()
         {
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Cadastramento de carros");
             Console.Write("Digite o modelo do carro: ");
             modeloCarros[atual] = Console.ReadLine();
@@ -45,7 +45,7 @@ namespace TrabalhoGrupoMecanica
 
         public void EditarCarro()
         {
-            
+            Console.Clear();
         }
 
         public void BuscarCarro()
@@ -101,6 +101,11 @@ namespace TrabalhoGrupoMecanica
         public void CarroComMenorPeso()
         {
             
+        }
+
+        public void ApagarMenu()
+        {
+            Console.Clear();
         }
     }
 }
