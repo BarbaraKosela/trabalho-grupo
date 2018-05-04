@@ -39,6 +39,151 @@ namespace TrabalhoGrupoMecanica
 
             atual++;
 
+<<<<<<< HEAD
         }   
+=======
+        }
+
+        public void EditarOnibus()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisa: ");
+            string modeloPesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (modeloPesquisado == onibusModelo[i])
+                {
+                    posicao = i;
+                }
+            }
+
+            if (posicao != -1)
+            {
+
+                Console.Write("Digite o modelo do avião: ");
+                onibusModelo[posicao] = Console.ReadLine();
+
+                Console.Write("Digite o ano de fabricação: ");
+                onibusAno[posicao] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite a cor do avião: ");
+                onibusCor[posicao] = Console.ReadLine();
+
+                Console.Write("Digite o preço do avião: ");
+                onibusPreco[posicao] = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Digite o peso do avião: ");
+                onibusPeso[posicao] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite quantos passageiros comporta: ");
+                onibusPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+
+
+                Console.Clear();
+
+                Console.WriteLine("Dados alterados com sucesso");
+            }
+
+
+            else
+            {
+                Console.WriteLine("Registro nao encontrado");
+            }
+        }
+
+        public void ListarOnibus()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de ônibus cadastrados: ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(String.Format("\nModelo: {0} \nAno: {1} \nCor: {2} \nPreço: {3}, \nPeso: {4} \nQuantidade de pessoas que comporta: {5}", onibusModelo[i], onibusAno[i], onibusCor[i], onibusPreco[i], onibusPeso[i], onibusPessoas[i]));
+
+            }
+        }
+
+        public void BuscarOnibus()
+        {
+            Console.WriteLine("Digite o nome do ônibus para a busca: ");
+            string modeloBuscado = Console.ReadLine();
+            bool encontrado = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (modeloBuscado == onibusModelo[i])
+                {
+                    Console.WriteLine(String.Format("\nModelo: {0} \nAno: {1} \nCor: {2} \nPreço: {3}, \nPeso: {4} \nQuantidade de pessoas que comporta: {5}", onibusModelo[i], onibusAno[i], onibusCor[i], onibusPreco[i], onibusPeso[i], onibusPessoas[i]));
+                    break;
+                }
+                encontrado = true;
+            }
+            if (!encontrado)
+            {
+                Console.WriteLine("Modelo de ônibus não encontrado");
+            }
+        }
+
+
+
+
+
+
+        public void TotalOnibus()
+        {
+            Console.WriteLine("O total dos ônibus é: ");
+            atual++;
+        }
+
+        public void MediaPrecoOnibus()
+        {
+
+        }
+
+        public void MediaAnosOnibus()
+        {
+
+        }
+
+        public void MediaPesosOnibus()
+        {
+
+        }
+
+        public void OnibusComMaiorPreco()
+        {
+
+        }
+
+        public void OnibusMaiorAnoFabricacao()
+        {
+
+        }
+
+        public void OnibusComMaiorPeso()
+        {
+
+        }
+
+        public void OnibusComMenorPreco()
+        {
+
+        }
+
+        public void OnibusComMenorAnoFabricacao()
+        {
+
+        }
+
+        public void OnibusComMenorPeso()
+        {
+
+        }
+
+        public void ApagarMenu()
+        {
+
+            Console.Clear();
+        }
+>>>>>>> ffd71ca69a3cf10bc7e6074c4a58428f1a2850c7
     }
 }
