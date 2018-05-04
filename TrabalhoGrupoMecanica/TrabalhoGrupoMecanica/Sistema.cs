@@ -267,7 +267,7 @@ namespace TrabalhoGrupoMecanica
                                 menuOnibus.OnibusComMenorPeso();
                                 break;
                             case 15:
-                                Console.Clear();
+                                menuOnibus.ApagarMenu();
                                 break;
 
                         }

@@ -127,7 +127,8 @@ namespace TrabalhoGrupoMecanica
 
         public void TotalOnibus()
         {
-
+            Console.WriteLine("O total dos ônibus é: ");
+            atual++;
         }
 
         public void MediaPrecoOnibus()
@@ -173,6 +174,12 @@ namespace TrabalhoGrupoMecanica
         public void OnibusComMenorPeso()
         {
 
+        }
+
+        public void ApagarMenu()
+        {
+
+            Console.Clear();
         }
     }
 }
