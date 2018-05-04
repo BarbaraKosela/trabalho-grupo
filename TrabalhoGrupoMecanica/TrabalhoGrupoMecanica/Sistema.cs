@@ -118,7 +118,76 @@ namespace TrabalhoGrupoMecanica
 
                        
                             break;
-                    case 2: 
+                    case 2: Console.Clear();
+                            Console.WriteLine(@"1 - Cadastrar Bicicleta: 
+2 - Editar Bicicleta
+3 - Listar Bicicleta
+4 - Buscar Bicicleta
+5 - Total
+6 - Média de preço de Bicicletas
+7 - Média de anos das Bicicletas
+8 - Média de pesos das Bicicletas
+9 - Bicicleta com maior preço
+10 - Bicicleta com maior ano de fabricação
+11 - Bicicleta com maior peso
+12 - Bicicleta com menor preço
+13 - Bicicleta com menor ano de fabricação
+14 - Bicicleta com menor peso
+15 - Sair");
+
+                            escolhaMenu = Convert.ToInt32(Console.ReadLine());
+
+                            switch (escolhaMenu)
+                            {
+
+                                case 1:
+                                    menuBicicleta.CadastrarBicicleta();
+                                    break;
+                                case 2:
+                                    menuBicicleta.ListarBicicleta();
+                                    break;
+                                case 3:
+                                    menuBicicleta.EditarBicicleta();
+                                    break;
+                                case 4:
+                                    menuBicicleta.BuscarBicicleta();
+                                    break;
+                                case 5:
+                                    menuBicicleta.TotalDeBicicletas();
+                                    break;
+                                case 6:
+                                    menuBicicleta.MediaDosPrecosDeBicicletas();
+                                    break;
+                                case 7:
+                                    menuBicicleta.MediaDosAnosDasBicicletas();
+                                    break;
+                                case 8:
+                                    menuBicicleta.MediaDosPesosDasBicicletas();
+                                    break;
+                                case 9:
+                                    menuBicicleta.bicicletaComMaiorPreco();
+                                    break;
+                                case 10:
+                                    menuBicicleta.BicicletaComMaiorAnoFabricacao();
+                                    break;
+                                case 11:
+                                    menuBicicleta. BicicletaComMaiorPeso();
+                                    break;
+                                case 12:
+                                    menuBicicleta.BicicletaComMenorPreco();
+                                    break;
+                                case 13:
+                                    menuBicicleta.BicicletaComMenorAnoFabricacao();
+                                    break;
+                                case 14:
+                                    menuBicicleta.BicicletaComMenorPeso();
+                                    break;
+                                case 15:
+                                    menuCarro.ApagarMenu();
+                                    break;
+
+                            }
+
                         break;
                     case 3:
                         break;
