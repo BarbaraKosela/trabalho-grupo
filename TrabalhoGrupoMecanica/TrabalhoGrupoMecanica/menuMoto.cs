@@ -19,24 +19,24 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarMoto()
         {
-            Console.WriteLine("Modelo Da Bicicleta: ");
+            Console.WriteLine(" Digite o Modelo Da Moto: ");
             modeloMoto[atual] = Console.ReadLine();
 
-            Console.WriteLine("Ano Da Bicicleta: ");
+            Console.WriteLine("Digite oAno Da Moto: ");
             anoMoto[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Cor Da Bicicleta: ");
+            Console.WriteLine("Digite aCor Da Moto: ");
             corMoto[atual] = Console.ReadLine();
 
-            Console.WriteLine("Preço Da Bicicleta: ");
+            Console.WriteLine("Digite o Preço Da Moto: ");
             precoMoto[atual] = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Peso Da Bicicleta: ");
+            Console.WriteLine("Digite o Peso Da Moto: ");
             pesoMoto[atual] = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Comporta Quantas Pessoas: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-
+            Console.Clear();
             atual++;
         }
     }
