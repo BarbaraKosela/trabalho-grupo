@@ -7,9 +7,31 @@ namespace TrabalhoGrupoMecanica
 {
     class menuCarro
     {
-         public void CadastrarCarro()
+        string[] modeloCarros = new string[100];
+        int[] anoFabricacaoCarros = new int[100];
+        string[] corCarros = new string[100];
+        double[] precoCarros = new double[100];
+        double[] pesoCarros = new double[100];
+        int[] comportaQuantasPessoas = new int[100];
+        int atual = 0;
+        public void CadastrarCarro()
         {
-            
+            Console.Write("Digite o modelo do carro: ");
+            modeloCarros[atual] = Console.ReadLine();
+            Console.Write("Digite o ano de fabricação do carro: ");
+            anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Digite a cor do carro: ");
+            corCarros[atual] = Console.ReadLine();
+            Console.Write("Digite o preço do carro: ");
+            precoCarros[atual] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Digite o peso do carro: ");
+            pesoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Comporta Quantas Pessoas: ");
+            comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            atual++;
+
         }
     }
 }

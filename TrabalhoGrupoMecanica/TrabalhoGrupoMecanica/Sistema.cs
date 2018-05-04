@@ -48,7 +48,7 @@ namespace TrabalhoGrupoMecanica
                     case 4:
                         menuAviao.CadastrarAviao();
                         break;
-                    case 5:
+                    case 5: menuCaminhao.CadastrarCaminhao();
                         break;
                     case 6:
                         menuOnibus.CadastrarOnibus();
