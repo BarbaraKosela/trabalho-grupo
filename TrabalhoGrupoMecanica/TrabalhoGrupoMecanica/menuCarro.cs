@@ -46,11 +46,56 @@ namespace TrabalhoGrupoMecanica
         public void EditarCarro()
         {
             Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisar: ");
+            string nomePesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomePesquisado == modeloCarros[i])
+                {
+                    posicao = i;
+                }
+            }
+            if (posicao != -1)
+            {
+                Console.WriteLine("Cadastramento de carros");
+                Console.Write("Digite o modelo do carro: ");
+                modeloCarros[posicao] = Console.ReadLine();
+                Console.Write("Digite o ano de fabricação do carro: ");
+                anoFabricacaoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Digite a cor do carro: ");
+                corCarros[posicao] = Console.ReadLine();
+                Console.Write("Digite o preço do carro: ");
+                precoCarros[posicao] = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Digite o peso do carro: ");
+                pesoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Digite quantos passageiros comporta: ");
+                comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+            }
+            else
+            {
+                Console.WriteLine("ERROR 404: Carro não encontrado");
+            }
         }
 
         public void BuscarCarro()
         {
-            
+            Console.WriteLine("Digite o nome para a busca: ");
+            string nomeBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeBuscado == modeloCarros[i])
+                {
+                    Console.WriteLine(String.Format("\nModelos dos carros: {0} \nAnos de Fabricação: {1} \nCores dos carros: {2} \nPreço dos carros: {3} \nPeso dos carros: {4} \nQuantidade de passageiros que comportam dentro do carro: {5}", modeloCarros[i], anoFabricacaoCarros[i], corCarros[i], precoCarros[i], pesoCarros[i], comportaQuantasPessoas[i]));
+                    break;
+                }
+                achou = true;
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Modelo solicitado não encontrado nos registros");
+            } 
         }
 
         public void TotalCarros()
