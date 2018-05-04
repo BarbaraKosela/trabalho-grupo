@@ -17,6 +17,8 @@ namespace TrabalhoGrupoMecanica
         double[] aviaoPeso = new double[100];
         int[] aviaoPessoas = new int[100];
         int atual = 0;
+
+        
         
         public void CadastrarAviao()
         {

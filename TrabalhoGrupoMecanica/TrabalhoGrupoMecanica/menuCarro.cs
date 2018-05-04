@@ -27,7 +27,7 @@ namespace TrabalhoGrupoMecanica
             precoCarros[atual] = Convert.ToDouble(Console.ReadLine());
             Console.Write("Digite o peso do carro: ");
             pesoCarros[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Comporta Quantas Pessoas: ");
+            Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 

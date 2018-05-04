@@ -27,7 +27,7 @@ namespace TrabalhoGrupoMecanica
             precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
             Console.Write("Digite o peso do caminhão: ");
             pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Comporta Quantas Pessoas no caminhão: ");
+            Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             atual++;
