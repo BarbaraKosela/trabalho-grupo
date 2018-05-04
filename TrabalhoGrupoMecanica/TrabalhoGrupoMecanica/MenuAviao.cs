@@ -126,11 +126,61 @@ namespace TrabalhoGrupoMecanica
              }
          }
 
-       
 
-        
 
-   }
+
+
+
+         public void TotalAvioes()
+         {
+             
+         }
+
+         public void MediaPrecoAviao()
+         {
+             
+         }
+
+         public void MediaAnosCarros()
+         {
+             
+         }
+
+         public void MediaPesosAviao()
+         {
+             
+         }
+
+         public void AviaoComMaiorPreco()
+         {
+             
+         }
+
+         public void AviaoMaiorAnoFabricacao()
+         {
+             
+         }
+
+         public void AviaoComMaiorPeso()
+         {
+             
+         }
+
+         public void AviaoComMenorPreco()
+         {
+             
+         }
+
+         public void AviaoComMenorAnoFabricacao()
+         {
+             
+         }
+
+         public void AviaoComMenorPeso()
+         {
+             
+         }
+    }
         
 
 

@@ -117,12 +117,85 @@ namespace TrabalhoGrupoMecanica
 
                         }
 
-                        break;
+                       
+                            break;
                     case 2: 
                         break;
                     case 3:
                         break;
                     case 4:
+
+                        Console.Clear();
+                        Console.WriteLine(@"1 - Cadastrar avião: 
+2 - Editar avião
+3 - Listar avião
+4 - Buscar avião 
+5 - Total
+6 - Média de preço dos aviões
+7 - Média de anos dos aviões
+8 - Média de pesos dos aviões
+9 - Avião com maior preço
+10 - Avião com maior ano de fabricação
+11 - Avião com maior peso
+12 - Avião com menor preço
+13 - Avião com menor ano de fabricação
+14 - Avião com menor peso
+15 - Sair");
+
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        
+                            switch (escolhaMenu)
+                            {
+                                case 1:
+                                    menuAviao.CadastrarAviao();
+                                    break;
+                                case 2:
+                                    menuAviao.EditarAviao();
+                                    break;
+                        
+                                case 3:
+                                    menuAviao.ListarAvioes();
+                                    break;
+                                case 4:
+                                    menuAviao.BuscarAviao();
+                                    break;
+                                case 5:
+                                    menuAviao.TotalAvioes();
+                                    break;
+                                case 6:
+                                    menuAviao.MediaPrecoAviao();
+                                    break;
+                                case 7:
+                                    menuAviao.MediaAnosCarros();
+                                    break;
+                                case 8:
+                                    menuAviao.MediaPesosAviao();
+                                    break;
+                                case 9:
+                                    menuAviao.AviaoComMaiorPreco();
+                                    break;
+                                case 10:
+                                    menuAviao.AviaoMaiorAnoFabricacao();
+                                    break;
+                                case 11:
+                                    menuAviao.AviaoComMaiorPeso();
+                                    break;
+                                case 12:
+                                    menuAviao.AviaoComMenorPreco();
+                                    break;
+                                case 13:
+                                    menuAviao.AviaoComMenorAnoFabricacao();
+                                    break;
+                                case 14:
+                                    menuAviao.AviaoComMenorPeso();
+                                    break;
+                                case 15:
+                                    Console.Clear();
+                                    break;
+
+
+                        }
+
                         
                         break;
                     case 5: 
