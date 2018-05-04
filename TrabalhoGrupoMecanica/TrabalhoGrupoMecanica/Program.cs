@@ -11,7 +11,12 @@ namespace TrabalhoGrupoMecanica
         static void Main(string[] args)
         {
             new Sistema();
-            
+            new MenuAviao();
+            new menuBicicleta();
+            new menuCaminhao();
+            new menuCarro();
+            new menuMoto();
+            new menuOnibus();
         }
     }
 }
