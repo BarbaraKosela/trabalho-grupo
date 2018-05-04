@@ -74,13 +74,28 @@ namespace TrabalhoGrupoMecanica
             }
             else
             {
-                Console.WriteLine("ERROR 404: Registro não encontrado");
+                Console.WriteLine("ERROR 404: Carro não encontrado");
             }
         }
 
         public void BuscarCarro()
         {
-            
+            Console.WriteLine("Digite o nome para a busca: ");
+            string nomeBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeBuscado == modeloCarros[i])
+                {
+                    Console.WriteLine(String.Format("\nModelos dos carros: {0} \nAnos de Fabricação: {1} \nCores dos carros: {2} \nPreço dos carros: {3} \nPeso dos carros: {4} \nQuantidade de passageiros que comportam dentro do carro: {5}", modeloCarros[i], anoFabricacaoCarros[i], corCarros[i], precoCarros[i], pesoCarros[i], comportaQuantasPessoas[i]));
+                    break;
+                }
+                achou = true;
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Modelo solicitado não encontrado nos registros");
+            } 
         }
 
         public void TotalCarros()
