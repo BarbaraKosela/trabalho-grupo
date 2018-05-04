@@ -48,32 +48,87 @@ namespace TrabalhoGrupoMecanica
 2 - Editar Carro
 3- Listar carro
 4 - Buscar carro 
-5 - Sair");
+5 - Total
+6 - Média de preço de carros
+7 - Média de anos dos carros
+8 - Média de pesos dos carros
+9 - Carro com maior preço
+10 - Carro com maior ano de fabricação
+11 - Carro com maior peso
+12 - Carro com menor preço
+13 - Carro com menor ano de fabricação
+14 - Carro com menor peso
+15 - Sair");
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        switch (escolhaMenu)
+                        while (escolhaMenu != 15)
                         {
-                            case 1:
-                                menuCarro.CadastrarCarro();
-                                break;
+                            switch (escolhaMenu)
+                            {
+                                
+                                
+                                
+                                case 1:
+                                    menuCarro.CadastrarCarro();
+                                    break;
+                                case 2:
+                                    menuCarro.ListarCarros();
+                                    break;
+                        
+                                case 3:
+                                    menuCarro.ListarCarros();
+                                    break;
+                                case 4:
+                                    menuCarro.BuscarCarro();
+                                    break;
+                                case 5:
+                                    menuCarro.TotalCarros();
+                                    break;
+                                case 6:
+                                    menuCarro.MediaPrecoCarros();
+                                    break;
+                                case 7:
+                                    menuCarro.MediaAnosCarros();
+                                    break;
+                                case 8:
+                                    menuCarro.MediaPesosCarros();
+                                    break;
+                                case 9:
+                                    menuCarro.CarroComMaiorPreco();
+                                    break;
+                                case 10:
+                                    menuCarro.CarroMaiorAnoFabricacao();
+                                    break;
+                                case 11:
+                                    menuCarro.CarroComMaiorPeso();
+                                    break;
+                                case 12:
+                                    menuCarro.CarroComMenorPreco();
+                                    break;
+                                case 13:
+                                    menuCarro.CarroComMenorAnoFabricacao();
+                                    break;
+                                case 14:
+                                    menuCarro.CarroComMenorPeso();
+                                    break;
 
-                            case 3:
-                                menuCarro.ListarCarros();
-                                break;
+
+                        }
+
                         }
 
                         break;
-                    case 2: menuMoto.CadastrarMoto();
+                    case 2: 
                         break;
-                    case 3: menuBicicleta.CadastrarBicicleta();
+                    case 3:
                         break;
                     case 4:
-                        menuAviao.CadastrarAviao();
+                        
                         break;
-                    case 5: menuCaminhao.CadastrarCaminhao();
+                    case 5: 
                         break;
                     case 6:
-                        menuOnibus.CadastrarOnibus();
+                        
                         break;
 
                 }
