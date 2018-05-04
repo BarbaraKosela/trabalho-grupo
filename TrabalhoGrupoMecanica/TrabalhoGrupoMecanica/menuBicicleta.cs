@@ -35,7 +35,7 @@ namespace TrabalhoGrupoMecanica
 
             Console.WriteLine("Comporta Quantas Pessoas: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-
+            Console.Clear();
             atual++;
         }
     }
