@@ -30,9 +30,16 @@ namespace TrabalhoGrupoMecanica
             Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
-
             atual++;
-
+        }
+        public void ListarCarros()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de carros: ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(String.Format("\nModelos dos carros: {0} \nAnos de Fabricação: {1} \nCores dos carros: {2} \nPreço dos carros: {3} \nPeso dos carros: {4} \nQuantidade de passageiros que comportam dentro do carro: {5}",modeloCarros[i], anoFabricacaoCarros[i], corCarros[i], precoCarros[i], pesoCarros[i], comportaQuantasPessoas[i]));
+            }
         }
     }
 }
