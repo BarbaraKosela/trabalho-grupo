@@ -16,6 +16,7 @@ namespace TrabalhoGrupoMecanica
         int atual = 0;
         public void CadastrarCarro()
         {
+            Console.WriteLine("Cadastramento de carros");
             Console.Write("Digite o modelo do carro: ");
             modeloCarros[atual] = Console.ReadLine();
             Console.Write("Digite o ano de fabricação do carro: ");

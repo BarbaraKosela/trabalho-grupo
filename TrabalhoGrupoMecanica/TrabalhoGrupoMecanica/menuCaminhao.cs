@@ -16,17 +16,18 @@ namespace TrabalhoGrupoMecanica
         int atual = 0;
         public void CadastrarCaminhao()
         {
-            Console.Write("Digite o modelo do carro: ");
+            Console.WriteLine("Cadastramento de caminhão");
+            Console.Write("Digite o modelo do caminhao: ");
             modeloCaminhao[atual] = Console.ReadLine();
-            Console.Write("Digite o ano de fabricação do carro: ");
+            Console.Write("Digite o ano de fabricação do caminhao: ");
             anoFabricacaoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite a cor do carro: ");
+            Console.Write("Digite a cor do caminhão: ");
             corCaminhao[atual] = Console.ReadLine();
-            Console.Write("Digite o preço do carro: ");
+            Console.Write("Digite o preço do caminhão: ");
             precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Digite o peso do carro: ");
+            Console.Write("Digite o peso do caminhão: ");
             pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Comporta Quantas Pessoas: ");
+            Console.Write("Comporta Quantas Pessoas no caminhão: ");
             comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             atual++;
