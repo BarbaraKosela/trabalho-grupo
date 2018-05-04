@@ -20,23 +20,25 @@ namespace TrabalhoGrupoMecanica
         
         public void CadastrarAviao()
         {
-            Console.WriteLine("Modelo do avião: ");
+            Console.Write("Digite o modelo do avião: ");
             aviaoModelo[atual] = Console.ReadLine();
 
-            Console.WriteLine("Ano de fabricação: ");
+            Console.Write("Digite o ano de fabricação: ");
             aviaoAno[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Cor do avião: ");
+            Console.Write("Digite a cor do avião: ");
             aviaoCor[atual] = Console.ReadLine();
 
-            Console.WriteLine("Preço do avião: ");
+            Console.Write("Digite o preço do avião: ");
             aviaoPreco[atual] = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Peso do avião: ");
+            Console.Write("Digite o peso do avião: ");
             aviaoPeso[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Comporta quantos passageiros? ");
+            Console.Write("Digite quantos passageiros comporta: ");
             aviaoPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
 
             atual++;
 
