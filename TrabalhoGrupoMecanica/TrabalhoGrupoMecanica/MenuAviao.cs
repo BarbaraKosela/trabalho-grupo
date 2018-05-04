@@ -44,13 +44,98 @@ namespace TrabalhoGrupoMecanica
 
             atual++;
 
-
         }
+
+
+            public void EditarAviao()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisa: ");
+            string modeloPesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (modeloPesquisado == aviaoModelo[i])
+                {
+                    posicao = i;
+                }
+            }
+            
+                if (posicao != -1)
+            {
+                
+                Console.Write("Digite o modelo do avião: ");
+            aviaoModelo[posicao] = Console.ReadLine();
+
+                Console.Write("Digite o ano de fabricação: ");
+            aviaoAno[posicao] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite a cor do avião: ");
+            aviaoCor[posicao] = Console.ReadLine();
+
+                Console.Write("Digite o preço do avião: ");
+            aviaoPreco[posicao] = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Digite o peso do avião: ");
+            aviaoPeso[posicao] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite quantos passageiros comporta: ");
+            aviaoPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+
+
+                    Console.Clear();
+
+                    Console.WriteLine("Dados alterados com sucesso");
+            }
+
+
+            else
+            {
+                Console.WriteLine("Registro nao encontrado");
+            }
+        }
+
+         public void ListarAvioes()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de aviões cadastrados: ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(String.Format("\nModelo: {0} \nAno: {1} \nCor: {2} \nPreço: {3}, \nPeso: {4} \nQuantidade de pessoas que comporta: {5}", aviaoModelo[i], aviaoAno[i], aviaoCor[i], aviaoPreco[i], aviaoPeso[i], aviaoPessoas[i]));
+                
+            }
+        }
+
+         public void BuscarAviao()
+         {
+             Console.WriteLine("Digite o nome do avião para a busca: ");
+             string modeloBuscado = Console.ReadLine();
+             bool encontrado = false;
+             for (int i = 0; i < atual; i++)
+             {
+                 if (modeloBuscado == aviaoModelo[i])
+                 {
+                     Console.WriteLine(String.Format("\nModelo: {0} \nAno: {1} \nCor: {2} \nPreço: {3}, \nPeso: {4} \nQuantidade de pessoas que comporta: {5}", aviaoModelo[i], aviaoAno[i], aviaoCor[i], aviaoPreco[i], aviaoPeso[i], aviaoPessoas[i]));
+                     break;
+                 }
+                 encontrado = true;
+             }
+             if (!encontrado)
+             {
+                 Console.WriteLine("Modelo de avião não encontrado");
+             }
+         }
+
+       
+
+        
+
+   }
         
 
 
 
 
 
-    }
 }
+
