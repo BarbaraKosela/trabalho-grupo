@@ -7,9 +7,9 @@ namespace TrabalhoGrupoMecanica
 {
     class menuCarro
     {
-        internal static void CadastrarCarro()
+         public void CadastrarCarro()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
