@@ -58,7 +58,7 @@ namespace TrabalhoGrupoMecanica
 12 - Carro com menor preço
 13 - Carro com menor ano de fabricação
 14 - Carro com menor peso
-15 - Sair");
+15 - Voltar menu inicial");
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
@@ -71,6 +71,9 @@ namespace TrabalhoGrupoMecanica
                                     break;
                                 case 2:
                                     menuCarro.ListarCarros();
+                                    Console.Clear();
+                                    GerirMenu();
+                                    
                                     break;
                         
                                 case 3:
@@ -110,7 +113,9 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.CarroComMenorPeso();
                                     break;
                                 case 15:
-                                    menuCarro.ApagarMenu();
+                                //menuCarro.ApagarMenuCarro();
+                                Console.Clear();
+                                GerirMenu();
                                     break;
 
                        }
@@ -184,7 +189,7 @@ namespace TrabalhoGrupoMecanica
                                     menuBicicleta.BicicletaComMenorPeso();
                                     break;
                                 case 15:
-                                    menuCarro.ApagarMenu();
+                                menuBicicleta.ApagarMenuBicicleta();
                                     break;
 
                             }
@@ -267,6 +272,73 @@ namespace TrabalhoGrupoMecanica
 
                         break;
                     case 5:
+                        Console.Clear();
+                        Console.WriteLine(@"1 - Cadastrar caminhão
+2 - Editar caminhão
+3 - Listar caminhões
+4 - Buscar caminhão
+5 - Total de caminhões
+6 - Média de preço dos caminhões
+7 - Média de anos dos caminhões
+8 - Média de pesos dos caminhões
+9 - caminhão com maior preço
+10 - caminhão com maior ano de fabricação
+11 - caminhão com maior peso
+12 - caminhão com menor preço
+13 - caminhão com menor ano de fabricação
+14 - caminhão com menor peso
+15 - Sair");
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        switch (escolhaMenu)
+                        {
+                            case 1:
+                                menuCaminhao.CadastrarCaminhao();
+                                break;
+                            case 2:
+                                menuCaminhao.EditarCaminhao();
+                                break;
+                            case 3:
+                                menuCaminhao.ListarCaminhao();
+                                break;
+                            case 4:
+                                menuCaminhao.BuscarCaminhao();
+                                break;
+                            case 5:
+                                menuCaminhao.TotalCaminhao();
+                                break;
+                            case 6:
+                                menuCaminhao.MediaPrecoCaminhao();
+                                break;
+                            case 7:
+                                menuCaminhao.MediaAnosCaminhao();
+                                break;
+                            case 8:
+                                menuCaminhao.MediaPesosCaminhao();
+                                break;
+                            case 9:
+                                menuCaminhao.CaminhaoComMaiorPreco();
+                                break;
+                            case 10:
+                                menuCaminhao.CaminhaoMaiorAnoFabricacao();
+                                break;
+                            case 11:
+                                menuCaminhao.CaminhaoComMaiorPeso();
+                                break;
+                            case 12:
+                                menuCaminhao.CaminhaoComMenorPreco();
+                                break;
+                            case 13:
+                                menuCaminhao.CaminhaoComMenorAnoFabricacao();
+                                break;
+                            case 14:
+                                menuCaminhao.CaminhaoComMenorPeso();
+                                break;
+                            case 15:
+                                menuCaminhao.ApagarMenuCaminhao();
+                                break;
+                                                                                    
+                        }
+
                         break;
 
                     case 6:
@@ -336,14 +408,14 @@ namespace TrabalhoGrupoMecanica
                                 menuOnibus.OnibusComMenorPeso();
                                 break;
                             case 15:
-                                menuOnibus.ApagarMenu();
+                                menuOnibus.ApagarMenuOnibus();
                                 break;
 
                         }
                         break;
 
-                        Menu();
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        //Menu();
+                        // = Convert.ToInt32(Console.ReadLine());
                 }
             }
         }

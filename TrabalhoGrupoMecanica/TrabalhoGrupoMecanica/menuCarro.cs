@@ -151,7 +151,7 @@ namespace TrabalhoGrupoMecanica
             
         }
 
-        public void ApagarMenu()
+        public void ApagarMenuCarro()
         {
             Console.Clear();
         }

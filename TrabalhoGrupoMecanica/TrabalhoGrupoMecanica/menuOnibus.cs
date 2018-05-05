@@ -176,7 +176,7 @@ namespace TrabalhoGrupoMecanica
 
     }
 
-    public void ApagarMenu()
+    public void ApagarMenuOnibus()
     {
 
         Console.Clear();

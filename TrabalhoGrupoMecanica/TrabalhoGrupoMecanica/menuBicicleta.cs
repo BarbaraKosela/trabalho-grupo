@@ -163,7 +163,7 @@ namespace TrabalhoGrupoMecanica
 
         }
 
-        public void ApagarMenu()
+        public void ApagarMenuBicicleta()
         {
             Console.Clear();
         }
