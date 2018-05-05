@@ -21,8 +21,8 @@ namespace TrabalhoGrupoMecanica
         {
             Console.WriteLine("O que deseja cadastrar?\n");
             Console.WriteLine(@"1 - carros
-2 - Motos
-3 - Bicicletas
+2 - Bicicletas
+3 - Motos
 4 - Aviões
 5 - Caminhão
 6 - Ônibus
@@ -62,7 +62,7 @@ namespace TrabalhoGrupoMecanica
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
-<<<<<<< HEAD
+
                             switch (escolhaMenu)
                             {
                                                                
@@ -188,66 +188,6 @@ namespace TrabalhoGrupoMecanica
                                     break;
 
                             }
-
-=======
-                        switch (escolhaMenu)
-                        {
-
-                            case 1:
-                                menuCarro.CadastrarCarro();
-                                break;
-                            case 2:
-                                menuCarro.ListarCarros();
-                                break;
-
-                            case 3:
-                                menuCarro.ListarCarros();
-                                break;
-                            case 4:
-                                menuCarro.BuscarCarro();
-                                break;
-                            case 5:
-                                menuCarro.TotalCarros();
-                                break;
-                            case 6:
-                                menuCarro.MediaPrecoCarros();
-                                break;
-                            case 7:
-                                menuCarro.MediaAnosCarros();
-                                break;
-                            case 8:
-                                menuCarro.MediaPesosCarros();
-                                break;
-                            case 9:
-                                menuCarro.CarroComMaiorPreco();
-                                break;
-                            case 10:
-                                menuCarro.CarroMaiorAnoFabricacao();
-                                break;
-                            case 11:
-                                menuCarro.CarroComMaiorPeso();
-                                break;
-                            case 12:
-                                menuCarro.CarroComMenorPreco();
-                                break;
-                            case 13:
-                                menuCarro.CarroComMenorAnoFabricacao();
-                                break;
-                            case 14:
-                                menuCarro.CarroComMenorPeso();
-                                break;
-                            case 15:
-                                menuCarro.ApagarMenu();
-                                break;
-
-                        }
-
-
-
-
-                        break;
-                    case 2:
->>>>>>> ffd71ca69a3cf10bc7e6074c4a58428f1a2850c7
                         break;
                     case 3:
                         break;
