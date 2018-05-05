@@ -42,7 +42,7 @@ namespace TrabalhoGrupoMecanica
                 switch (escolhaMenu)
                 {
                     case 1:
-
+                        //();
                         Console.Clear();
                         Console.WriteLine(@"1 - Cadastrar carro: 
 2 - Editar Carro
@@ -59,20 +59,21 @@ namespace TrabalhoGrupoMecanica
 13 - Carro com menor ano de fabricação
 14 - Carro com menor peso
 15 - Voltar menu inicial");
-
+                        Menu();
                          escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
 
                             switch (escolhaMenu)
                             {
-                                                               
-                                    case 1:
+
+                                case 1:
                                     menuCarro.CadastrarCarro();
                                     break;
+
                                 case 2:
                                     menuCarro.EditarCarro();
-                                    Console.Clear();
-                                    GerirMenu();
+                                    //Console.Clear();
+                                    //GerirMenu();
                                     
                                     break;
                         
@@ -114,12 +115,11 @@ namespace TrabalhoGrupoMecanica
                                     break;
                                 case 15:
                                      menuCarro.ApagarMenuCarro();
-                                    Menu();
                                      break;
 
                        }
 
- 
+                      //  GerirMenu();
 
                        
                             break;

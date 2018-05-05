@@ -19,6 +19,11 @@ namespace TrabalhoGrupoMecanica
         double maiorPesoCarro = double.MinValue;
         int menorQuantidadePassageiros = int.MaxValue;
         int maiorQuantidadePassageiros = int.MinValue;
+        int maiorAnoFabricacao = int.MinValue;
+        int menorAnoFabricacao = int.MaxValue;
+        double somaPrecoCarros = 0;
+        double somaPesoCarros = 0;
+        int somaAnoFabricacao = 0;
         int atual = 0;
         public void CadastrarCarro()
         {
@@ -37,6 +42,9 @@ namespace TrabalhoGrupoMecanica
             Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
+            somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
+            somaPesoCarros = somaPesoCarros + pesoCarros[atual];
+            somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[atual];
             atual++;
         }
         public void ListarCarros()
@@ -108,54 +116,82 @@ namespace TrabalhoGrupoMecanica
         {
             Console.Clear();
             //int totalCarros = modeloCarros[atual].Length;
-            Console.WriteLine("Total de carros " + atual);
+           // Console.WriteLine("Total de carros " + atual);
             
             
         }
 
         public void MediaPrecoCarros()
         {
-            
+            double mediaPreco = somaPrecoCarros / atual;
+            Console.WriteLine("Média de peso dos carros: " + mediaPreco);
         }
 
         public void MediaAnosCarros()
         {
+            int mediaAnosCarros = somaAnoFabricacao / atual;
+            Console.WriteLine("Média ano dos carros: " + mediaAnosCarros);
             
         }
 
         public void MediaPesosCarros()
         {
-            
+            double mediaPesosCarros = somaPesoCarros / atual;
+            Console.WriteLine("Média peso dos carros: " + mediaPesosCarros);
         }
 
         public void CarroComMaiorPreco()
         {
-            
+            if (precoCarros[atual] > maiorPrecoCarro)
+            {
+                maiorPrecoCarro = precoCarros[atual];
+            }
+            Console.WriteLine("Preço do carro mais caro: " + maiorPrecoCarro);
         }
 
         public void CarroMaiorAnoFabricacao()
         {
-            
+            if (anoFabricacaoCarros[atual] > maiorAnoFabricacao)
+            {
+                maiorAnoFabricacao = anoFabricacaoCarros[atual];
+            }
+            Console.WriteLine("Ano de fabricação mais recente: " + maiorAnoFabricacao);
         }
 
         public void CarroComMaiorPeso()
         {
-            
+            if (pesoCarros[atual] > maiorPesoCarro)
+            {
+                maiorPesoCarro = pesoCarros[atual];
+            }
+            Console.WriteLine("Peso do carro mais pesado: " + maiorPesoCarro);
         }
 
         public void CarroComMenorPreco()
         {
-            
+            if (precoCarros[atual] < menorPrecoCarro)
+            {
+                menorPrecoCarro = precoCarros[atual];
+            }
+            Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
         }
 
         public void CarroComMenorAnoFabricacao()
         {
-            
+            if (anoFabricacaoCarros[atual] < menorAnoFabricacao)
+            {
+                menorAnoFabricacao = anoFabricacaoCarros[atual];
+            }
+            Console.WriteLine("Maior ano fabricação: " + menorAnoFabricacao);
         }
 
         public void CarroComMenorPeso()
         {
-            
+            if (pesoCarros[atual] < menorPesoCarro)
+            {
+                menorPrecoCarro = pesoCarros[atual];
+            }
+            Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
         }
 
         public void ApagarMenuCarro()
