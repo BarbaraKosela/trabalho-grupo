@@ -13,10 +13,16 @@ namespace TrabalhoGrupoMecanica
         double[] precoCarros = new double[100];
         double[] pesoCarros = new double[100];
         int[] comportaQuantasPessoas = new int[100];
+        double menorPrecoCarro = double.MaxValue;
+        double maiorPrecoCarro = 0;
+        double menorPesoCarro = double.MaxValue;
+        double maiorPesoCarro = double.MinValue;
+        int menorQuantidadePassageiros = int.MaxValue;
+        int maiorQuantidadePassageiros = int.MinValue;
         int atual = 0;
         public void CadastrarCarro()
         {
-            //Console.Clear();
+            Console.Clear();
             Console.WriteLine("Cadastramento de carros");
             Console.Write("Digite o modelo do carro: ");
             modeloCarros[atual] = Console.ReadLine();
@@ -101,7 +107,8 @@ namespace TrabalhoGrupoMecanica
         public void TotalCarros()
         {
             Console.Clear();
-            int totalCarros = modeloCarros[atual].Length;
+            //int totalCarros = modeloCarros[atual].Length;
+            Console.WriteLine("Total de carros " + atual);
             
             
         }
@@ -154,6 +161,7 @@ namespace TrabalhoGrupoMecanica
         public void ApagarMenuCarro()
         {
             Console.Clear();
+            
         }
     }
 }

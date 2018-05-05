@@ -60,7 +60,7 @@ namespace TrabalhoGrupoMecanica
 14 - Carro com menor peso
 15 - Voltar menu inicial");
 
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
 
                             switch (escolhaMenu)
@@ -70,7 +70,7 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.CadastrarCarro();
                                     break;
                                 case 2:
-                                    menuCarro.ListarCarros();
+                                    menuCarro.EditarCarro();
                                     Console.Clear();
                                     GerirMenu();
                                     
@@ -80,7 +80,7 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.ListarCarros();
                                     break;
                                 case 4:
-                                    menuCarro.BuscarCarro();
+                                    menuCarro.BuscarCarro();                                                               
                                     break;
                                 case 5:
                                     menuCarro.TotalCarros();
@@ -113,10 +113,9 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.CarroComMenorPeso();
                                     break;
                                 case 15:
-                                //menuCarro.ApagarMenuCarro();
-                                Console.Clear();
-                                GerirMenu();
-                                    break;
+                                     menuCarro.ApagarMenuCarro();
+                                    Menu();
+                                     break;
 
                        }
 
