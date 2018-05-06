@@ -179,8 +179,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o modelo do caminhão: ");
-                        modeloCaminhao[atual] = Console.ReadLine();
-                        if (modeloCaminhao[atual].Length >= 5)
+                        modeloCaminhao[posicao] = Console.ReadLine();
+                        if (modeloCaminhao[posicao].Length >= 5)
                         {
                             validarTexto = false;
                         }
@@ -200,8 +200,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o ano de fabricação: ");
-                        anoFabricacaoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (anoFabricacaoCaminhao[atual] >= 0)
+                        anoFabricacaoCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (anoFabricacaoCaminhao[posicao] >= 0)
                         {
                             validarAnoFabricacao = false;
                         }
@@ -221,9 +221,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite a cor do caminhão: ");
-                        corCaminhao[atual] = Console.ReadLine();
-                        validarTexto = false;
-                        if (corCaminhao[atual].Length >= 3)
+                        corCaminhao[posicao] = Console.ReadLine();                        
+                        if (corCaminhao[posicao].Length >= 3)
                         {
                             validarTexto = false;
                         }
@@ -244,8 +243,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o preço do caminhão: ");
-                        precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
-                        if (precoCaminhao[atual] > 0)
+                        precoCaminhao[posicao] = Convert.ToDouble(Console.ReadLine());
+                        if (precoCaminhao[posicao] > 0)
                         {
                             validarPrecoCaminhao = false;
                         }
@@ -266,8 +265,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o peso do caminhão: ");
-                        pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (pesoCaminhao[atual] > 0)
+                        pesoCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (pesoCaminhao[posicao] > 0)
                         {
                             validarPesoCaminhao = false;
                         }
@@ -287,8 +286,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite quantos passageiros comporta: ");
-                        comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (comportaQuantasPessoasCaminhao[atual] > 0)
+                        comportaQuantasPessoasCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (comportaQuantasPessoasCaminhao[posicao] > 0)
                         {
                             validarPassageirosCaminhao = false;
                         }

@@ -182,8 +182,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite o modelo da bicicleta: ");
-                            modeloBicicleta[atual] = Console.ReadLine();
-                            if (modeloBicicleta[atual].Length >= 5)
+                            modeloBicicleta[posicao] = Console.ReadLine();
+                            if (modeloBicicleta[posicao].Length >= 5)
                             {
                                 validarTexto = false;
                             }
@@ -203,8 +203,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite o ano de fabricação: ");
-                            anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
-                            if (anoBicicleta[atual] >= 0)
+                            anoBicicleta[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (anoBicicleta[posicao] >= 0)
                             {
                                 validarAnoFabricacao = false;
                             }
@@ -224,9 +224,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite a cor da bicicleta: ");
-                            corBicicleta[atual] = Console.ReadLine();
-                            validarTexto = false;
-                            if (corBicicleta[atual].Length >= 3)
+                            corBicicleta[posicao] = Console.ReadLine();                            
+                            if (corBicicleta[posicao].Length >= 3)
                             {
                                 validarTexto = false;
                             }
@@ -247,8 +246,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite o preço da bicicleta: ");
-                            precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
-                            if (precoBicicleta[atual] > 0)
+                            precoBicicleta[posicao] = Convert.ToDouble(Console.ReadLine());
+                            if (precoBicicleta[posicao] > 0)
                             {
                                 validarPrecoBicicleta = false;
                             }
@@ -269,8 +268,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite o peso da bicicleta: ");
-                            anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
-                            if (anoBicicleta[atual] > 0)
+                            anoBicicleta[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (anoBicicleta[posicao] > 0)
                             {
                                 validarPesoBicicleta = false;
                             }
@@ -290,8 +289,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite quantos passageiros comporta: ");
-                            comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-                            if (comportaQuantasPessoas[atual] > 0)
+                            comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (comportaQuantasPessoas[posicao] > 0)
                             {
                                 validarPassageirosBicicleta = false;
                             }

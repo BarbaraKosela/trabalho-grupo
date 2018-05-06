@@ -17,8 +17,6 @@ namespace TrabalhoGrupoMecanica
         double maiorPrecoCarro = 0;
         double menorPesoCarro = double.MaxValue;
         double maiorPesoCarro = double.MinValue;
-        int menorQuantidadePassageiros = int.MaxValue;
-        int maiorQuantidadePassageiros = int.MinValue;
         int maiorAnoFabricacao = int.MinValue;
         int menorAnoFabricacao = int.MaxValue;
         double somaPrecoCarros = 0;
@@ -29,18 +27,126 @@ namespace TrabalhoGrupoMecanica
         {
             Console.Clear();
             Console.WriteLine("Cadastramento de carros");
-            Console.Write("Digite o modelo do carro: ");
-            modeloCarros[atual] = Console.ReadLine();
-            Console.Write("Digite o ano de fabricação do carro: ");
-            anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite a cor do carro: ");
-            corCarros[atual] = Console.ReadLine();
-            Console.Write("Digite o preço do carro: ");
-            precoCarros[atual] = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Digite o peso do carro: ");
-            pesoCarros[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite quantos passageiros comporta: ");
-            comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+            bool validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite o modelo do carro: ");
+                    modeloCarros[atual] = Console.ReadLine();
+                    if (modeloCarros[atual].Length >= 5)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Modelo do carro deve conter no mínimo 5 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Modelo do carro invalido, digite novamente");
+                }
+            }
+            bool validarAnoFabricacao = true;
+            while (validarAnoFabricacao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o ano de fabricação do carro: ");
+                    anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            bool validarCor = true;
+            while(validarCor == true)
+            {
+                try
+                {
+                    Console.Write("Digite a cor do carro: ");
+                    corCarros[atual] = Console.ReadLine();
+                    if (corCarros[atual].Length >= 5)
+                    {
+                        validarCor = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cor do carro deve conter no mínimo 5 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Cor do carro invalida, digite novamente");
+                }
+            }
+            bool validarPreco = true;
+            while (validarPreco == true)
+            {
+                try
+                {
+                    Console.Write("Digite o preço do carro: ");
+                    precoCarros[atual] = Convert.ToDouble(Console.ReadLine());
+                    if (precoCarros[atual] > 0)
+                    {
+                        validarPreco = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Preço do carro solicitado é 0 ou menor tornando invalido, digite novamente");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Preço do carro invalido, digite novamente");
+                }
+            }
+
+            bool validarPeso = true;
+            while (validarPeso == true)
+            {
+                try
+                {
+                    Console.Write("Digite o peso do carro: ");
+                    pesoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (pesoCarros[atual] > 0)
+                    {
+                        validarPeso = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Peso invalido, digite novamente");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Peso invalido, digite novamente");
+                }
+            }
+            bool validarQuantidadePassageiros = true;
+            while (validarQuantidadePassageiros == true)
+            {
+                try
+                {
+                    Console.Write("Digite quantos passageiros comporta: ");
+                    comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (comportaQuantasPessoas[atual] > 0)
+                    {
+                        validarQuantidadePassageiros = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                }
+            }
             Console.Clear();
             somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
             somaPesoCarros = somaPesoCarros + pesoCarros[atual];
@@ -72,19 +178,126 @@ namespace TrabalhoGrupoMecanica
             }
             if (posicao != -1)
             {
-                Console.WriteLine("Cadastramento de carros");
-                Console.Write("Digite o modelo do carro: ");
-                modeloCarros[posicao] = Console.ReadLine();
-                Console.Write("Digite o ano de fabricação do carro: ");
-                anoFabricacaoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Digite a cor do carro: ");
-                corCarros[posicao] = Console.ReadLine();
-                Console.Write("Digite o preço do carro: ");
-                precoCarros[posicao] = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Digite o peso do carro: ");
-                pesoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Digite quantos passageiros comporta: ");
-                comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+                bool validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o modelo do carro: ");
+                        modeloCarros[posicao] = Console.ReadLine();
+                        if (modeloCarros[posicao].Length >= 5)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Modelo do carro deve conter no mínimo 5 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Modelo do carro invalido, digite novamente");
+                    }
+                }
+                bool validarAnoFabricacao = true;
+                while (validarAnoFabricacao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o ano de fabricação do carro: ");
+                        anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+                bool validarCor = true;
+                while (validarCor == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite a cor do carro: ");
+                        corCarros[posicao] = Console.ReadLine();
+                        if (corCarros[posicao].Length >= 5)
+                        {
+                            validarCor = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cor do carro deve conter no mínimo 5 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Cor do carro invalida, digite novamente");
+                    }
+                }
+                bool validarPreco = true;
+                while (validarPreco == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o preço do carro: ");
+                        precoCarros[posicao] = Convert.ToDouble(Console.ReadLine());
+                        if (precoCarros[posicao] > 0)
+                        {
+                            validarPreco = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Preço do carro solicitado é 0 ou menor tornando invalido, digite novamente");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Preço do carro invalido, digite novamente");
+                    }
+                }
+
+                bool validarPeso = true;
+                while (validarPeso == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o peso do carro: ");
+                        pesoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (pesoCarros[posicao] > 0)
+                        {
+                            validarPeso = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Peso invalido, digite novamente");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Peso invalido, digite novamente");
+                    }
+                }
+                bool validarQuantidadePassageiros = true;
+                while (validarQuantidadePassageiros == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite quantos passageiros comporta: ");
+                        comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (comportaQuantasPessoas[posicao] > 0)
+                        {
+                            validarQuantidadePassageiros = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                    }
+                }
             }
             else
             {

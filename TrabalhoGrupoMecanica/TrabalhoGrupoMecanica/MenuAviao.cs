@@ -180,8 +180,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o modelo do avião: ");
-                        aviaoModelo[atual] = Console.ReadLine();
-                        if (aviaoModelo[atual].Length >= 5)
+                        aviaoModelo[posicao] = Console.ReadLine();
+                        if (aviaoModelo[posicao].Length >= 5)
                         {
                             validarTexto = false;
                         }
@@ -201,8 +201,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o ano de fabricação: ");
-                        aviaoAno[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (aviaoAno[atual] >= 0)
+                        aviaoAno[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoAno[posicao] >= 0)
                         {
                             validarAnoFabricacao = false;
                         }
@@ -222,9 +222,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite a cor do avião: ");
-                        aviaoCor[atual] = Console.ReadLine();
-                        validarTexto = false;
-                        if (aviaoCor[atual].Length >= 3)
+                        aviaoCor[posicao] = Console.ReadLine();
+                        if (aviaoCor[posicao].Length >= 3)
                         {
                             validarTexto = false;
                         }
@@ -245,8 +244,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o preço do avião: ");
-                        aviaoPreco[atual] = Convert.ToDouble(Console.ReadLine());
-                        if (aviaoPreco[atual] > 0)
+                        aviaoPreco[posicao] = Convert.ToDouble(Console.ReadLine());
+                        if (aviaoPreco[posicao] > 0)
                         {
                             validarPrecoAviao = false;
                         }
@@ -267,8 +266,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite o peso do avião: ");
-                        aviaoPeso[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (aviaoPeso[atual] > 0)
+                        aviaoPeso[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoPeso[posicao] > 0)
                         {
                             validarPesoAviao = false;
                         }
@@ -288,8 +287,8 @@ namespace TrabalhoGrupoMecanica
                     try
                     {
                         Console.Write("Digite quantos passageiros comporta: ");
-                        aviaoPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (aviaoPeso[atual] > 0)
+                        aviaoPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoPeso[posicao] > 0)
                         {
                             validarPassageirosAviao = false;
                         }
