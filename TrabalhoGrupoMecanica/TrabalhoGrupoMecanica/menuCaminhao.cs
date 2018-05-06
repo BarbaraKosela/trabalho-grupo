@@ -13,6 +13,18 @@ namespace TrabalhoGrupoMecanica
         double[] precoCaminhao = new double[100];
         double[] pesoCaminhao = new double[100];
         int[] comportaQuantasPessoasCaminhao = new int[100];
+        double caminhaoMaiorPeso = double.MinValue;
+        double caminhaoMenorPeso = double.MaxValue;
+        int caminhaoMenorAnoFabricacao = int.MinValue;
+        int caminhaoMaiorAnoFabricacao = int.MaxValue;
+        double caminhaoMaiorPreco = double.MinValue;
+        double caminhaoMenorPreco = double.MaxValue;
+        double somaValoresCaminhao = 0;
+        int somaAnoFabricacao = 0;
+        double somaPesoCaminhao = 0;
+
+
+        
         int atual = 0;
         public void CadastrarCaminhao()
         {
@@ -145,6 +157,9 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
                 }
             }
+            somaValoresCaminhao = precoCaminhao[atual] + somaValoresCaminhao;
+            somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCaminhao[atual];
+            somaPesoCaminhao = pesoCaminhao[atual] + somaPesoCaminhao;
             Console.Clear();
             atual++;
         }
@@ -330,55 +345,83 @@ namespace TrabalhoGrupoMecanica
 
         public void TotalCaminhao()
         {
-            //.Clear();
-            //int totalCarros = modeloCarros[atual].Length;
+            Console.Clear();
+            Console.WriteLine("Total de caminhões solicitados" + atual);
 
 
         }
 
         public void MediaPrecoCaminhao()
         {
+            double mediaPreco = somaValoresCaminhao / atual;
+            Console.WriteLine("Média de preço: " + mediaPreco);
 
         }
 
         public void MediaAnosCaminhao()
         {
-
+            double mediaAnosCaminhao = somaAnoFabricacao / atual;
+            Console.WriteLine("Média anos de fabricação: " + mediaAnosCaminhao);
         }
 
         public void MediaPesosCaminhao()
         {
-
+            double mediaPesosCaminhao = somaPesoCaminhao / atual;
+            Console.WriteLine("Média de pesos dos caminhões" + mediaPesosCaminhao);
         }
 
         public void CaminhaoComMaiorPreco()
         {
+            if (precoCaminhao[atual] > caminhaoMaiorPreco)
+            {
+                caminhaoMaiorPreco = precoCaminhao[atual];
+            }
 
+            Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
         }
 
         public void CaminhaoMaiorAnoFabricacao()
         {
-
+            if(anoFabricacaoCaminhao[atual] > caminhaoMaiorAnoFabricacao)
+            {
+                caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
+            }
+            Console.WriteLine("Maior ano de fabricação caminhão" + caminhaoMaiorAnoFabricacao);
         }
 
         public void CaminhaoComMaiorPeso()
         {
-
+            if (pesoCaminhao[atual] > caminhaoMaiorPeso)
+            {
+                caminhaoMaiorPeso = pesoCaminhao[atual];
+            }
         }
 
         public void CaminhaoComMenorPreco()
         {
-
+            if (precoCaminhao[atual] < caminhaoMenorPreco)
+            {
+                caminhaoMenorPreco = precoCaminhao[atual];
+            }
+            Console.WriteLine("Maior preço de caminhão" + caminhaoMenorPeso);
         }
 
         public void CaminhaoComMenorAnoFabricacao()
         {
-
+            if(anoFabricacaoCaminhao[atual] < caminhaoMenorAnoFabricacao)
+            {
+                caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
+            }
+            Console.WriteLine("Menor ano de fabricação caminhão" + caminhaoMenorAnoFabricacao);
         }
 
         public void CaminhaoComMenorPeso()
         {
-
+            if(pesoCaminhao[atual] < caminhaoMenorPeso)
+            {
+                caminhaoMenorPeso = pesoCaminhao[atual];
+            }
+            Console.WriteLine("Menor peso caminhão" + caminhaoMenorPeso);
         }
 
 
