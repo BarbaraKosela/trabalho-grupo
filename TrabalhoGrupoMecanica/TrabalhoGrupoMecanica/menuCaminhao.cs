@@ -49,6 +49,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Nome invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAnoFabricacao = true;
             while (validarAnoFabricacao == true)
             {
@@ -70,6 +71,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano de fabricação deve constar apenas números");
                 }
             }
+            Console.WriteLine(" ");
             validarTexto = true;
             while (validarTexto == true)
             {
@@ -92,7 +94,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor do caminhão invalida, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPrecoCaminhao = true;
             while (validarPrecoCaminhao == true)
             {
@@ -115,6 +117,7 @@ namespace TrabalhoGrupoMecanica
                 }
 
             }
+            Console.WriteLine(" ");
             bool validarPesoCaminhao = true;
             while (validarPesoCaminhao == true)
             {
@@ -136,6 +139,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPassageirosCaminhao = true;
             while (validarPassageirosCaminhao == true)
             {
@@ -209,6 +213,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Nome invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarAnoFabricacao = true;
                 while (validarAnoFabricacao == true)
                 {
@@ -230,6 +235,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Ano de fabricação deve constar apenas números");
                     }
                 }
+                Console.WriteLine(" ");
                 validarTexto = true;
                 while (validarTexto == true)
                 {
@@ -251,7 +257,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Cor do caminhão invalida, digite novamente");
                     }
                 }
-
+                Console.WriteLine(" ");
                 bool validarPrecoCaminhao = true;
                 while (validarPrecoCaminhao == true)
                 {
@@ -274,6 +280,7 @@ namespace TrabalhoGrupoMecanica
                     }
 
                 }
+                Console.WriteLine(" ");
                 bool validarPesoCaminhao = true;
                 while (validarPesoCaminhao == true)
                 {
@@ -295,6 +302,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Peso invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarPassageirosCaminhao = true;
                 while (validarPassageirosCaminhao == true)
                 {

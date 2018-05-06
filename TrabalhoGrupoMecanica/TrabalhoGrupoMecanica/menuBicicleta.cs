@@ -40,6 +40,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Nome invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAnoFabricacao = true;
             while (validarAnoFabricacao == true)
             {
@@ -61,6 +62,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano de fabricação deve constar apenas números");
                 }
             }
+            Console.WriteLine(" ");
             validarTexto = true;
             while (validarTexto == true)
             {
@@ -83,7 +85,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor da bicicleta invalida, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPrecoBicicleta = true;
             while (validarPrecoBicicleta == true)
             {
@@ -106,6 +108,7 @@ namespace TrabalhoGrupoMecanica
                 }
 
             }
+            Console.WriteLine(" ");
             bool validarPesoBicicleta = true;
             while (validarPesoBicicleta == true)
             {
@@ -127,6 +130,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPassageirosBicicleta = true;
             while (validarPassageirosBicicleta == true)
             {
@@ -154,7 +158,7 @@ namespace TrabalhoGrupoMecanica
         public void ListarBicicleta()
         {
             Console.Clear();
-            Console.WriteLine("Listar Biciccleta: ");
+            Console.WriteLine("Listar Bicicleta: ");
             for (int i = 0; i < atual; i++)
             {
                 Console.WriteLine(
@@ -198,6 +202,7 @@ namespace TrabalhoGrupoMecanica
                             Console.WriteLine("Nome invalido, digite novamente");
                         }
                     }
+                    Console.WriteLine(" ");
                     bool validarAnoFabricacao = true;
                     while (validarAnoFabricacao == true)
                     {
@@ -219,6 +224,7 @@ namespace TrabalhoGrupoMecanica
                             Console.WriteLine("Ano de fabricação deve constar apenas números");
                         }
                     }
+                    Console.WriteLine(" ");
                     validarTexto = true;
                     while (validarTexto == true)
                     {
@@ -240,7 +246,7 @@ namespace TrabalhoGrupoMecanica
                             Console.WriteLine("Cor da bicicleta invalida, digite novamente");
                         }
                     }
-
+                    Console.WriteLine(" ");
                     bool validarPrecoBicicleta = true;
                     while (validarPrecoBicicleta == true)
                     {
@@ -263,6 +269,7 @@ namespace TrabalhoGrupoMecanica
                         }
 
                     }
+                    Console.WriteLine(" ");
                     bool validarPesoBicicleta = true;
                     while (validarPesoBicicleta == true)
                     {
@@ -284,6 +291,7 @@ namespace TrabalhoGrupoMecanica
                             Console.WriteLine("Peso invalido, digite novamente");
                         }
                     }
+                    Console.WriteLine(" ");
                     bool validarPassageirosBicicleta = true;
                     while (validarPassageirosBicicleta == true)
                     {

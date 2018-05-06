@@ -44,6 +44,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Nome invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAnoFabricacao = true;
             while (validarAnoFabricacao == true)
             {
@@ -65,6 +66,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano de fabricação deve constar apenas números");
                 }
             }
+            Console.WriteLine(" ");
             validarTexto = true;
             while (validarTexto == true)
             {
@@ -87,7 +89,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor do avião invalida, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPrecoAviao = true;
             while(validarPrecoAviao == true)
             {
@@ -110,6 +112,7 @@ namespace TrabalhoGrupoMecanica
                 }
 
             }
+            Console.WriteLine(" ");
             bool validarPesoAviao = true;
             while (validarPesoAviao == true)
             {
@@ -131,6 +134,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPassageirosAviao = true;
             while(validarPassageirosAviao == true)
             {
@@ -196,6 +200,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Nome invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarAnoFabricacao = true;
                 while (validarAnoFabricacao == true)
                 {
@@ -217,6 +222,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Ano de fabricação deve constar apenas números");
                     }
                 }
+                Console.WriteLine(" ");
                 validarTexto = true;
                 while (validarTexto == true)
                 {
@@ -238,7 +244,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Cor do avião invalida, digite novamente");
                     }
                 }
-
+                Console.WriteLine(" ");
                 bool validarPrecoAviao = true;
                 while (validarPrecoAviao == true)
                 {
@@ -259,8 +265,8 @@ namespace TrabalhoGrupoMecanica
                     {
                         Console.WriteLine("Preço invalido, digite novamente");
                     }
-
                 }
+                Console.WriteLine(" ");
                 bool validarPesoAviao = true;
                 while (validarPesoAviao == true)
                 {
@@ -282,6 +288,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Peso invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarPassageirosAviao = true;
                 while (validarPassageirosAviao == true)
                 {

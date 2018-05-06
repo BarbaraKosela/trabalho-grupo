@@ -48,6 +48,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Modelo do carro invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAnoFabricacao = true;
             while (validarAnoFabricacao == true)
             {
@@ -70,6 +71,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano de fabricação invalida, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarCor = true;
             while(validarCor == true)
             {
@@ -91,6 +93,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor do carro invalida, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPreco = true;
             while (validarPreco == true)
             {
@@ -112,7 +115,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Preço do carro invalido, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPeso = true;
             while (validarPeso == true)
             {
@@ -134,6 +137,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarQuantidadePassageiros = true;
             while (validarQuantidadePassageiros == true)
             {
@@ -207,7 +211,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Modelo do carro invalido, digite novamente");
                     }
                 }
-
+                Console.WriteLine(" ");
                 bool validarAnoFabricacao = true;
                 while (validarAnoFabricacao == true)
                 {
@@ -229,9 +233,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Ano de fabricação invalida");
                     }
                 }
-                        //Console.Write("Digite o ano de fabricação do carro: ");
-                        //anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
-
+                Console.WriteLine(" ");
                 bool validarCor = true;
                 while (validarCor == true)
                 {
@@ -253,6 +255,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Cor do carro invalida, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarPreco = true;
                 while (validarPreco == true)
                 {
@@ -274,7 +277,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Preço do carro invalido, digite novamente");
                     }
                 }
-
+                Console.WriteLine(" ");
                 bool validarPeso = true;
                 while (validarPeso == true)
                 {
@@ -296,6 +299,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Peso invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarQuantidadePassageiros = true;
                 while (validarQuantidadePassageiros == true)
                 {

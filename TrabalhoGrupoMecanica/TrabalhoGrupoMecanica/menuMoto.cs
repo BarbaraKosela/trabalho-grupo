@@ -41,6 +41,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Nome da moto invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAno = true;
             while (validarAno == true)
             {
@@ -62,6 +63,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano da moto invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarCor = true;
             while (validarCor == true)
             {
@@ -83,7 +85,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor da moto invalida, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPreco = true;
             while (validarPreco == true)
             {
@@ -105,6 +107,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Preço da moto invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPeso = true;
             while (validarPeso == true)
             {
@@ -126,6 +129,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso da moto invalido, digite novamente");
                 }         
             }
+            Console.WriteLine(" ");
             bool validarPassageiros = true;
             while (validarPassageiros == true)
             {

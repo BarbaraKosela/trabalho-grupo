@@ -39,6 +39,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Nome do ônibus invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarAno = true;
             while (validarAno == true)
             {
@@ -60,6 +61,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Ano do ônibus invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarCor = true;
             while (validarCor == true)
             {
@@ -81,7 +83,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Cor do ônibus invalida, digite novamente");
                 }
             }
-
+            Console.WriteLine(" ");
             bool validarPreco = true;
             while (validarPreco == true)
             {
@@ -103,6 +105,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Preço do ônibus invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPeso = true;
             while (validarPeso == true)
             {
@@ -124,6 +127,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Peso do ônibus invalido, digite novamente");
                 }
             }
+            Console.WriteLine(" ");
             bool validarPassageiros = true;
             while (validarPassageiros == true)
             {
@@ -190,6 +194,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Nome do ônibus invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarAno = true;
                 while (validarAno == true)
                 {
@@ -211,6 +216,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Ano do ônibus invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarCor = true;
                 while (validarCor == true)
                 {
@@ -232,7 +238,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Cor do ônibus invalida, digite novamente");
                     }
                 }
-
+                Console.WriteLine(" ");
                 bool validarPreco = true;
                 while (validarPreco == true)
                 {
@@ -254,6 +260,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Preço do ônibus invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarPeso = true;
                 while (validarPeso == true)
                 {
@@ -275,6 +282,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Peso do ônibus invalido, digite novamente");
                     }
                 }
+                Console.WriteLine(" ");
                 bool validarPassageiros = true;
                 while (validarPassageiros == true)
                 {
