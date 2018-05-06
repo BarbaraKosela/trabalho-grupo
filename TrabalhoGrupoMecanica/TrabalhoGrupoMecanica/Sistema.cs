@@ -620,6 +620,8 @@ namespace TrabalhoGrupoMecanica
                         Menu();
                         
                 }
+                Menu();
+                escolhaMenu = Convert.ToInt32(Console.ReadLine());
             }
         }
     }
