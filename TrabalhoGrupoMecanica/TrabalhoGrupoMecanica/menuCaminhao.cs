@@ -346,7 +346,7 @@ namespace TrabalhoGrupoMecanica
         public void TotalCaminhao()
         {
             Console.Clear();
-            Console.WriteLine("Total de caminhões solicitados" + atual);
+            Console.WriteLine("Total de caminhões solicitados: " + atual);
 
 
         }
@@ -367,7 +367,7 @@ namespace TrabalhoGrupoMecanica
         public void MediaPesosCaminhao()
         {
             double mediaPesosCaminhao = somaPesoCaminhao / atual;
-            Console.WriteLine("Média de pesos dos caminhões" + mediaPesosCaminhao);
+            Console.WriteLine("Média de pesos dos caminhões: " + mediaPesosCaminhao);
         }
 
         public void CaminhaoComMaiorPreco()

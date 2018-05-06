@@ -22,6 +22,7 @@ namespace TrabalhoGrupoMecanica
         
         public void CadastrarAviao()
         {
+            Console.Clear();
             bool validarTexto = true;
             while (validarTexto == true)
             {

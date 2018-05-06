@@ -617,11 +617,33 @@ namespace TrabalhoGrupoMecanica
                         }
                         break;
 
-                        Menu();
+                        
                         
                 }
                 Menu();
-                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                validarNumeroMenu = true;                
+                while (validarNumeroMenu == true)
+
+                {
+                    try
+                    {
+                        Console.Write("Digite a opçao desejada: ");
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        if ((escolhaMenu >= 1) && (escolhaMenu <= 7))
+                        {
+                            validarNumeroMenu = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Opção desejada invalida, digite novamente");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Opcao deve conter somente números");
+                    }
+                }
+                
             }
         }
     }

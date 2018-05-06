@@ -17,6 +17,7 @@ namespace TrabalhoGrupoMecanica
 
     public void CadastrarOnibus()
     {
+            Console.Clear();
             bool validarTexto = true;
             while (validarTexto == true)
             {

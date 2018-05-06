@@ -19,6 +19,7 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarMoto()
         {
+            Console.Clear();
             bool validarTexto = true;
             while (validarTexto == true)
             {

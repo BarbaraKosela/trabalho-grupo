@@ -18,6 +18,7 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarBicicleta()
         {
+            Console.Clear();
             bool validarTexto = true;
             while (validarTexto == true)
             {
