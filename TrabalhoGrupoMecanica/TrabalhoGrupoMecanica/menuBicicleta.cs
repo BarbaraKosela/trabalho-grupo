@@ -18,7 +18,7 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarBicicleta()
         {
-            Console.Write("Digite o modelo da bicicleta: ");
+            /*Console.Write("Digite o modelo da bicicleta: ");
             modeloBicicleta[atual] = Console.ReadLine();
 
             Console.Write("Digite o ano da bicicleta: ");
@@ -36,7 +36,137 @@ namespace TrabalhoGrupoMecanica
             Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
-            atual++;
+            aual++;*/
+            bool validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite o modelo da bicicleta: ");
+                    modeloBicicleta[atual] = Console.ReadLine();
+                    if (modeloBicicleta[atual].Length >= 5)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nome da biclceta deve conter no mínimo 5 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Nome invalido, digite novamente");
+                }
+            }
+            bool validarAnoFabricacao = true;
+            while (validarAnoFabricacao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o ano de fabricação: ");
+                    anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (anoBicicleta[atual] >= 0)
+                    {
+                        validarAnoFabricacao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ano de fabricação invalida");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ano de fabricação deve constar apenas números");
+                }
+            }
+            validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite a cor da bicicleta: ");
+                    corBicicleta[atual] = Console.ReadLine();
+                    validarTexto = false;
+                    if (corBicicleta[atual].Length >= 3)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cor da bicicleta deve conter no mínimo 3 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Cor da bicicleta invalida, digite novamente");
+                }
+            }
+
+            bool validarPrecoBicicleta = true;
+            while (validarPrecoBicicleta == true)
+            {
+                try
+                {
+                    Console.Write("Digite o preço da bicicleta: ");
+                    precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
+                    if (precoBicicleta[atual] > 0)
+                    {
+                        validarPrecoBicicleta = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Preço invalido, digite novamente");
+                }
+
+            }
+            bool validarPesoBicicleta = true;
+            while (validarPesoBicicleta == true)
+            {
+                try
+                {
+                    Console.Write("Digite o peso da bicicleta: ");
+                    anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (anoBicicleta[atual] > 0)
+                    {
+                        validarPesoBicicleta = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Peso invalido, digite novamente");
+                }
+            }
+            bool validarPassageirosBicicleta = true;
+            while (validarPassageirosBicicleta == true)
+            {
+                try
+                {
+                    Console.Write("Digite quantos passageiros comporta: ");
+                    comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (comportaQuantasPessoas[atual] > 0)
+                    {
+                        validarPassageirosBicicleta = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                }
+            }
+
         }
 
         public void ListarBicicleta()
@@ -65,24 +195,138 @@ namespace TrabalhoGrupoMecanica
                 }
                 if (posicao != 1)
                 {
-                    Console.Write("Digite o modelo da bicicleta: ");
-                    modeloBicicleta[atual] = Console.ReadLine();
+                    bool validarTexto = true;
+                    while (validarTexto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o modelo da bicicleta: ");
+                            modeloBicicleta[atual] = Console.ReadLine();
+                            if (modeloBicicleta[atual].Length >= 5)
+                            {
+                                validarTexto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nome da biclceta deve conter no mínimo 5 caracteres");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Nome invalido, digite novamente");
+                        }
+                    }
+                    bool validarAnoFabricacao = true;
+                    while (validarAnoFabricacao == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o ano de fabricação: ");
+                            anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
+                            if (anoBicicleta[atual] >= 0)
+                            {
+                                validarAnoFabricacao = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ano de fabricação invalida");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Ano de fabricação deve constar apenas números");
+                        }
+                    }
+                    validarTexto = true;
+                    while (validarTexto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite a cor da bicicleta: ");
+                            corBicicleta[atual] = Console.ReadLine();
+                            validarTexto = false;
+                            if (corBicicleta[atual].Length >= 3)
+                            {
+                                validarTexto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Cor da bicicleta deve conter no mínimo 3 caracteres");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Cor da bicicleta invalida, digite novamente");
+                        }
+                    }
 
-                    Console.Write("Digite o ano da bicicleta: ");
-                    anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
+                    bool validarPrecoBicicleta = true;
+                    while (validarPrecoBicicleta == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o preço da bicicleta: ");
+                            precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
+                            if (precoBicicleta[atual] > 0)
+                            {
+                                validarPrecoBicicleta = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Preço invalido, digite novamente");
+                        }
 
-                    Console.Write("Digite a cor da bicicleta: ");
-                    corBicicleta[atual] = Console.ReadLine();
+                    }
+                    bool validarPesoBicicleta = true;
+                    while (validarPesoBicicleta == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o peso da bicicleta: ");
+                            anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
+                            if (anoBicicleta[atual] > 0)
+                            {
+                                validarPesoBicicleta = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Peso invalido, digite novamente");
+                        }
+                    }
+                    bool validarPassageirosBicicleta = true;
+                    while (validarPassageirosBicicleta == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite quantos passageiros comporta: ");
+                            comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+                            if (comportaQuantasPessoas[atual] > 0)
+                            {
+                                validarPassageirosBicicleta = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                        }
+                    }
 
-                    Console.Write("Digite o preço da bicicleta: ");
-                    precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
-
-                    Console.Write("Digite o peso da bicicleta: ");
-                    pesoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
-
-                    Console.Write("Digite quantos passageiros comporta: ");
-                    comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Dados Alterados Com Sucesso: ");
+                
+                Console.WriteLine("Dados Alterados Com Sucesso: ");
                 }
                 else
                 {
