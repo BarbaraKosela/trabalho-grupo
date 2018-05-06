@@ -34,7 +34,30 @@ namespace TrabalhoGrupoMecanica
         public void GerirMenu()
         {
             Menu();
-            int escolhaMenu = Convert.ToInt32(Console.ReadLine());
+            bool validarNumeroMenu = true;
+            int escolhaMenu = 0;
+            while (validarNumeroMenu == true)
+            
+            {
+                try
+                {
+                    Console.Write("Digite a opçao desejada: ");
+                    escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                    if ((escolhaMenu >= 1) && (escolhaMenu <= 7))
+                    {
+                        validarNumeroMenu = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opção desejada invalida, digite novamente");
+                    }
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Opcao deve conter somente números");
+                }
+            }
+            
 
 
             while (escolhaMenu != 7)
@@ -59,10 +82,29 @@ namespace TrabalhoGrupoMecanica
 13 - Carro com menor ano de fabricação
 14 - Carro com menor peso
 15 - Voltar menu inicial");
-                         
-                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
-                                               
+                        validarNumeroMenu = true;
+                        while (validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Digite a opção desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");                               
+                                }
+                            }
+                            catch(Exception e)
+                            {
+                                Console.WriteLine("Opção deve conter somente números");
+                            }
+                        }                 
+                                                                      
                             switch (escolhaMenu)
                             {
 
@@ -141,9 +183,29 @@ namespace TrabalhoGrupoMecanica
 14 - Bicicleta com menor peso
 15 - Sair");
 
-                            escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        validarNumeroMenu = true;
+                        while (validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Digite a opção desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("Opção deve conter somente números");
+                            }
+                        }
 
-                            switch (escolhaMenu)
+                        switch (escolhaMenu)
                             {
 
                                 case 1:
@@ -215,7 +277,27 @@ namespace TrabalhoGrupoMecanica
 14 - Avião com menor peso
 15 - Sair");
 
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        validarNumeroMenu = true;
+                        while (validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Digite a opção desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("Opção deve conter somente números");
+                            }
+                        }
 
                         switch (escolhaMenu)
                         {
@@ -288,7 +370,27 @@ namespace TrabalhoGrupoMecanica
 13 - caminhão com menor ano de fabricação
 14 - caminhão com menor peso
 15 - Sair");
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        validarNumeroMenu = true;
+                        while (validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Digite a opção desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("Opção deve conter somente números");
+                            }
+                        }
                         switch (escolhaMenu)
                         {
                             case 1:
@@ -360,7 +462,27 @@ namespace TrabalhoGrupoMecanica
 14 - ônibus com menor peso
 15 - Sair");
 
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        validarNumeroMenu = true;
+                        while (validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Digite a opção desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("Opção deve conter somente números");
+                            }
+                        }
 
                         switch (escolhaMenu)
                         {
@@ -414,8 +536,8 @@ namespace TrabalhoGrupoMecanica
                         }
                         break;
 
-                        //Menu();
-                        // = Convert.ToInt32(Console.ReadLine());
+                        Menu();
+                        
                 }
             }
         }

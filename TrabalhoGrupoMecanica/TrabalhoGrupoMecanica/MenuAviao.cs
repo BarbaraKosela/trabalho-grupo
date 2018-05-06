@@ -22,26 +22,136 @@ namespace TrabalhoGrupoMecanica
         
         public void CadastrarAviao()
         {
-            Console.Write("Digite o modelo do avião: ");
-            aviaoModelo[atual] = Console.ReadLine();
+            bool validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite o modelo do avião: ");
+                    aviaoModelo[atual] = Console.ReadLine();                    
+                    if (aviaoModelo[atual].Length >= 5)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nome do avião deve conter no mínimo 5 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Nome invalido, digite novamente");
+                }
+            }
+            bool validarAnoFabricacao = true;
+            while (validarAnoFabricacao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o ano de fabricação: ");
+                    aviaoAno[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (aviaoAno[atual] >= 0)
+                    {
+                        validarAnoFabricacao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ano de fabricação invalida");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ano de fabricação deve constar apenas números");
+                }
+            }
+            validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite a cor do avião: ");
+                    aviaoCor[atual] = Console.ReadLine();
+                    validarTexto = false;
+                    if(aviaoCor[atual].Length >= 3)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cor do avião deve conter no mínimo 3 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Cor do avião invalida, digite novamente");
+                }
+            }
 
-            Console.Write("Digite o ano de fabricação: ");
-            aviaoAno[atual] = Convert.ToInt32(Console.ReadLine());
+            bool validarPrecoAviao = true;
+            while(validarPrecoAviao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o preço do avião: ");
+                    aviaoPreco[atual] = Convert.ToDouble(Console.ReadLine());
+                    if (aviaoPreco[atual] > 0)
+                    {
+                        validarPrecoAviao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Preço invalido, digite novamente");
+                }
 
-            Console.Write("Digite a cor do avião: ");
-            aviaoCor[atual] = Console.ReadLine();
-
-            Console.Write("Digite o preço do avião: ");
-            aviaoPreco[atual] = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Digite o peso do avião: ");
-            aviaoPeso[atual] = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Digite quantos passageiros comporta: ");
-            aviaoPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-
+            }
+            bool validarPesoAviao = true;
+            while (validarPesoAviao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o peso do avião: ");
+                    aviaoPeso[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (aviaoPeso[atual] > 0)
+                    {
+                        validarPesoAviao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Peso invalido, digite novamente");
+                }
+            }
+            bool validarPassageirosAviao = true;
+            while(validarPassageirosAviao == true)
+            {
+                try
+                {
+                    Console.Write("Digite quantos passageiros comporta: ");
+                    aviaoPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (aviaoPeso[atual] > 0)
+                    {
+                        validarPassageirosAviao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                }
+            }
             Console.Clear();
-
             atual++;
 
         }
@@ -63,27 +173,139 @@ namespace TrabalhoGrupoMecanica
             
                 if (posicao != -1)
             {
-                
-                Console.Write("Digite o modelo do avião: ");
-            aviaoModelo[posicao] = Console.ReadLine();
 
-                Console.Write("Digite o ano de fabricação: ");
-            aviaoAno[posicao] = Convert.ToInt32(Console.ReadLine());
+                bool validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o modelo do avião: ");
+                        aviaoModelo[atual] = Console.ReadLine();
+                        if (aviaoModelo[atual].Length >= 5)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nome do avião deve conter no mínimo 5 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Nome invalido, digite novamente");
+                    }
+                }
+                bool validarAnoFabricacao = true;
+                while (validarAnoFabricacao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o ano de fabricação: ");
+                        aviaoAno[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoAno[atual] >= 0)
+                        {
+                            validarAnoFabricacao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ano de fabricação invalida");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Ano de fabricação deve constar apenas números");
+                    }
+                }
+                validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite a cor do avião: ");
+                        aviaoCor[atual] = Console.ReadLine();
+                        validarTexto = false;
+                        if (aviaoCor[atual].Length >= 3)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cor do avião deve conter no mínimo 3 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Cor do avião invalida, digite novamente");
+                    }
+                }
 
-                Console.Write("Digite a cor do avião: ");
-            aviaoCor[posicao] = Console.ReadLine();
+                bool validarPrecoAviao = true;
+                while (validarPrecoAviao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o preço do avião: ");
+                        aviaoPreco[atual] = Convert.ToDouble(Console.ReadLine());
+                        if (aviaoPreco[atual] > 0)
+                        {
+                            validarPrecoAviao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Preço invalido, digite novamente");
+                    }
 
-                Console.Write("Digite o preço do avião: ");
-            aviaoPreco[posicao] = Convert.ToDouble(Console.ReadLine());
+                }
+                bool validarPesoAviao = true;
+                while (validarPesoAviao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o peso do avião: ");
+                        aviaoPeso[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoPeso[atual] > 0)
+                        {
+                            validarPesoAviao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Peso invalido, digite novamente");
+                    }
+                }
+                bool validarPassageirosAviao = true;
+                while (validarPassageirosAviao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite quantos passageiros comporta: ");
+                        aviaoPessoas[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (aviaoPeso[atual] > 0)
+                        {
+                            validarPassageirosAviao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                    }
+                }
 
-                Console.Write("Digite o peso do avião: ");
-            aviaoPeso[posicao] = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Digite quantos passageiros comporta: ");
-            aviaoPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
-
-
-                    Console.Clear();
+                Console.Clear();
 
                     Console.WriteLine("Dados alterados com sucesso");
             }
