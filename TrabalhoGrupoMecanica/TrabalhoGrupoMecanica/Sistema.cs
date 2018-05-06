@@ -256,7 +256,93 @@ namespace TrabalhoGrupoMecanica
 
                             }
                         break;
-                    case 3:
+                    case 3: Console.Clear();
+                        Console.WriteLine(@"1 - Cadastrar moto
+2 - Editar moto
+3 - Listar moto
+4 - Buscar motoo 
+5 - Total
+6 - Média de preço das motos
+7 - Média de anos das motos
+8 - Média de pesos das motos
+9 - Moto com maior preço
+10 - Moto com maior ano de fabricação
+11 - Moto com maior peso
+12 - Moto com menor preço
+13 - Moto com menor ano de fabricação
+14 - Moto com menor peso
+15 - Sair - ");
+                        validarNumeroMenu = true;
+                        while(validarNumeroMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Digite a sua opçao do menu desejada");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 15))
+                                {
+                                    validarNumeroMenu = false;
+                                } 
+                                else
+                                {
+                                    Console.WriteLine("Opção do menu invalida, opções validas são números entre 1 a 15");
+                                }
+                            }
+                            catch(Exception)
+                            {
+                                Console.WriteLine("Opção do menu invalida, digite novamente");
+                            }
+                        }
+                        switch (escolhaMenu)
+                        {
+                            case 1:
+                                menuMoto.CadastrarMoto();
+                                break;
+                            case 2:
+                                menuMoto.EditarMoto();
+                                break;
+                            case 3:
+                                menuMoto.ListarMoto();
+                                break;
+                            case 4:
+                                menuMoto.BuscarMoto();
+                                break;
+                            case 5:
+                                menuMoto.TotalMoto();
+                                break;
+                            case 6:
+                                menuMoto.MediaPrecoMoto();
+                                break;
+                            case 7:
+                                menuMoto.MediaAnosMoto();
+                                break;
+                            case 8:
+                                menuMoto.MediaPesosMoto();
+                                break;
+                            case 9:
+                                menuMoto.MotoComMaiorPreco();
+                                break;
+                            case 10:
+                                menuMoto.MotoMaiorAnoFabricacao();
+                                break;
+                            case 11:
+                                menuMoto.MotoComMaiorPeso();
+                                break;
+                            case 12:
+                                menuMoto.MotoComMenorPreco();
+                                break;
+                            case 13:
+                                menuMoto.MotoComMenorAnoFabricacao();
+                                break;
+                            case 14:
+                                menuMoto.MotoComMenorPeso();
+                                break;
+                            case 15:
+                                menuMoto.MotoApagarMenu();
+                                break;
+
+                        }
+
                         break;
                     case 4:
 
