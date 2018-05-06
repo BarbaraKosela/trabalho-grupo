@@ -49,7 +49,7 @@ namespace TrabalhoGrupoMecanica
                     anoMoto[atual] = Convert.ToInt32(Console.ReadLine());
                     if (anoMoto[atual] > 0)
                     {
-                        validarAno = true;
+                        validarAno = false;
                     }
                     else
                     {

@@ -47,7 +47,7 @@ namespace TrabalhoGrupoMecanica
                     onibusAno[atual] = Convert.ToInt32(Console.ReadLine());
                     if (onibusAno[atual] > 0)
                     {
-                        validarAno = true;
+                        validarAno = false;
                     }
                     else
                     {
@@ -198,7 +198,7 @@ namespace TrabalhoGrupoMecanica
                         onibusAno[posicao] = Convert.ToInt32(Console.ReadLine());
                         if (onibusAno[posicao] > 0)
                         {
-                            validarAno = true;
+                            validarAno = false;
                         }
                         else
                         {

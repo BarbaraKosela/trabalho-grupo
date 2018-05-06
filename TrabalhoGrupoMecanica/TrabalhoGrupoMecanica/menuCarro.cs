@@ -55,11 +55,19 @@ namespace TrabalhoGrupoMecanica
                 {
                     Console.Write("Digite o ano de fabricação do carro: ");
                     anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+                    if(anoFabricacaoCarros[atual] > 0)
+                    {
+                        validarAnoFabricacao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ano de fabricação solicitada foi 0 ou menor, digite novamente numero acima de 0");
+                    }
 
                 }
                 catch (Exception)
                 {
-
+                    Console.WriteLine("Ano de fabricação invalida, digite novamente");
                 }
             }
             bool validarCor = true;
@@ -199,20 +207,31 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Modelo do carro invalido, digite novamente");
                     }
                 }
+
                 bool validarAnoFabricacao = true;
                 while (validarAnoFabricacao == true)
                 {
                     try
                     {
                         Console.Write("Digite o ano de fabricação do carro: ");
-                        anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
-
+                        anoFabricacaoCarros[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if(anoFabricacaoCarros[posicao] > 0)
+                        {
+                            validarAnoFabricacao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ano de fabricação é 0 ou menor é invalido, digite novamente");
+                        }
                     }
                     catch (Exception)
                     {
-
+                        Console.WriteLine("Ano de fabricação invalida");
                     }
                 }
+                        //Console.Write("Digite o ano de fabricação do carro: ");
+                        //anoFabricacaoCarros[atual] = Convert.ToInt32(Console.ReadLine());
+
                 bool validarCor = true;
                 while (validarCor == true)
                 {
@@ -327,9 +346,9 @@ namespace TrabalhoGrupoMecanica
 
         public void TotalCarros()
         {
-            Console.Clear();
+            //Console.Clear();
             //int totalCarros = modeloCarros[atual].Length;
-           // Console.WriteLine("Total de carros " + atual);
+            Console.WriteLine("Total de carros " + atual);
             
             
         }

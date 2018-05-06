@@ -52,7 +52,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine("Opção desejada invalida, digite novamente");
                     }
                 }
-                catch(Exception e)
+                catch(Exception)
                 {
                     Console.WriteLine("Opcao deve conter somente números");
                 }
@@ -99,7 +99,7 @@ namespace TrabalhoGrupoMecanica
                                     Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");                               
                                 }
                             }
-                            catch(Exception e)
+                            catch(Exception)
                             {
                                 Console.WriteLine("Opção deve conter somente números");
                             }
@@ -158,14 +158,9 @@ namespace TrabalhoGrupoMecanica
                                     break;
                                 case 15:
                                     menuCarro.ApagarMenuCarro();
-                                    break;
-                        }
-                           
-
-                      //  GerirMenu();
-
-                       
-                            break;
+                                break;
+                        }                 
+                                break;
                     case 2: Console.Clear();
                             Console.WriteLine(@"1 - Cadastrar Bicicleta: 
 2 - Editar Bicicleta
@@ -199,7 +194,7 @@ namespace TrabalhoGrupoMecanica
                                     Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
                                 }
                             }
-                            catch (Exception e)
+                            catch (Exception)
                             {
                                 Console.WriteLine("Opção deve conter somente números");
                             }
@@ -260,7 +255,7 @@ namespace TrabalhoGrupoMecanica
                         Console.WriteLine(@"1 - Cadastrar moto
 2 - Editar moto
 3 - Listar moto
-4 - Buscar motoo 
+4 - Buscar moto 
 5 - Total
 6 - Média de preço das motos
 7 - Média de anos das motos
@@ -379,7 +374,7 @@ namespace TrabalhoGrupoMecanica
                                     Console.WriteLine("Opçao invalida, respostas validas são números entre 1 e 15");
                                 }
                             }
-                            catch (Exception e)
+                            catch (Exception)
                             {
                                 Console.WriteLine("Opção deve conter somente números");
                             }
