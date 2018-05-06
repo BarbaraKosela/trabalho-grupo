@@ -13,6 +13,12 @@ namespace TrabalhoGrupoMecanica
         double[] pesoBicicleta = new double[100];
         int[] comportaQuantasPessoas = new int[100];
         int[] anoBicicleta = new int[100];
+        double bicicletaMaiorPeso = double.MinValue;
+        double bicicletaMenorPeso = double.MaxValue;
+        int bicicletaMenorAnoFabricacao = int.MinValue;
+        int bicicletaMaiorAnoFabricacao = int.MaxValue;
+        double bicicletaMaiorPreco = double.MinValue;
+        double bicicletaMenorPreco = double.MaxValue;
         int atual = 0;
 
 

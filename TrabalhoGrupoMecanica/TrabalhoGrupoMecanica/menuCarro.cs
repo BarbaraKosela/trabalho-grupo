@@ -14,7 +14,7 @@ namespace TrabalhoGrupoMecanica
         double[] pesoCarros = new double[100];
         int[] comportaQuantasPessoas = new int[100];
         double menorPrecoCarro = double.MaxValue;
-        double maiorPrecoCarro = 0;
+        double maiorPrecoCarro = double.MinValue;
         double menorPesoCarro = double.MaxValue;
         double maiorPesoCarro = double.MinValue;
         int maiorAnoFabricacao = int.MinValue;

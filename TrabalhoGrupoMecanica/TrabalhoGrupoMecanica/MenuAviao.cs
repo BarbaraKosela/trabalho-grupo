@@ -16,6 +16,12 @@ namespace TrabalhoGrupoMecanica
         double[] aviaoPreco = new double[100];
         double[] aviaoPeso = new double[100];
         int[] aviaoPessoas = new int[100];
+        double aviaoMaiorPeso = double.MinValue;
+        double aviaoMenorPeso = double.MaxValue;
+        int aviaoMenorAnoFabricacao = int.MinValue;
+        int aviaoMaiorAnoFabricacao = int.MaxValue;
+        double aviaoMaiorPreco = double.MinValue;
+        double aviaoMenorPreco = double.MaxValue;
         int atual = 0;
 
         
@@ -409,6 +415,10 @@ namespace TrabalhoGrupoMecanica
          {
              
          }
+         public void AviaoApagarMenu()
+        {
+            Console.Clear();
+        }
 
     }
         

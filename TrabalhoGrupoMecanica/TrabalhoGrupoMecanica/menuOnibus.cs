@@ -7,13 +7,19 @@ namespace TrabalhoGrupoMecanica
 { 
    class menuOnibus
 {
-    string[] onibusModelo = new string[100];
-    int[] onibusAno = new int[100];
-    string[] onibusCor = new string[100];
-    double[] onibusPreco = new double[100];
-    double[] onibusPeso = new double[100];
-    int[] onibusPessoas = new int[100];
-    int atual = 0;
+        string[] onibusModelo = new string[100];
+        int[] onibusAno = new int[100];
+        string[] onibusCor = new string[100];
+        double[] onibusPreco = new double[100];
+        double[] onibusPeso = new double[100];
+        int[] onibusPessoas = new int[100];
+        double onibusMaiorPeso = double.MinValue;
+        double onibusMenorPeso = double.MaxValue;
+        int onibusMenorAnoFabricacao = int.MinValue;
+        int onibusMaiorAnoFabricacao = int.MaxValue;
+        double onibusMaiorPreco = double.MinValue;
+        double onibusMenorPreco = double.MaxValue;
+        int atual = 0;
 
     public void CadastrarOnibus()
     {

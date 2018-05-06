@@ -426,7 +426,7 @@ namespace TrabalhoGrupoMecanica
                                 menuAviao.AviaoComMenorPeso();
                                 break;
                             case 15:
-                                Console.Clear();
+                                menuAviao.AviaoApagarMenu();
                                 break;
 
 
@@ -620,6 +620,7 @@ namespace TrabalhoGrupoMecanica
                         
                         
                 }
+                //Reaparece o menu após o submenu
                 Menu();
                 validarNumeroMenu = true;                
                 while (validarNumeroMenu == true)

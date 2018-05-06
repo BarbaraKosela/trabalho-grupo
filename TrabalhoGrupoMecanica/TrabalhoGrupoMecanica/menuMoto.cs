@@ -13,7 +13,13 @@ namespace TrabalhoGrupoMecanica
         double[] pesoMoto = new double[100];
         int[] anoMoto = new int[100];
         int[] comportaQuantasPessoas = new int[100];
-      
+        double motoMaiorPeso = double.MinValue;
+        double motoMenorPeso = double.MaxValue;
+        int motooMenorAnoFabricacao = int.MinValue;
+        int motoMaiorAnoFabricacao = int.MaxValue;
+        double motoMaiorPreco = double.MinValue;
+        double motoMenorPreco = double.MaxValue;
+
         int atual = 0;
 
 
@@ -222,7 +228,7 @@ namespace TrabalhoGrupoMecanica
 
         public void MotoApagarMenu()
         {
-           
+            Console.Clear();  
         }
     }
 }
