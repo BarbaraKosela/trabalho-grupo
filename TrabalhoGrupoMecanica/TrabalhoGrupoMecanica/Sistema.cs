@@ -59,29 +59,30 @@ namespace TrabalhoGrupoMecanica
 13 - Carro com menor ano de fabricação
 14 - Carro com menor peso
 15 - Voltar menu inicial");
-                        Menu();
+                         
                          escolhaMenu = Convert.ToInt32(Console.ReadLine());
 
-
+                                               
                             switch (escolhaMenu)
                             {
 
                                 case 1:
                                     menuCarro.CadastrarCarro();
                                     break;
+                                    
 
                                 case 2:
                                     menuCarro.EditarCarro();
                                     //Console.Clear();
                                     //GerirMenu();
-                                    
+
                                     break;
-                        
+
                                 case 3:
                                     menuCarro.ListarCarros();
                                     break;
                                 case 4:
-                                    menuCarro.BuscarCarro();                                                               
+                                    menuCarro.BuscarCarro();
                                     break;
                                 case 5:
                                     menuCarro.TotalCarros();
@@ -114,10 +115,10 @@ namespace TrabalhoGrupoMecanica
                                     menuCarro.CarroComMenorPeso();
                                     break;
                                 case 15:
-                                     menuCarro.ApagarMenuCarro();
-                                     break;
-
-                       }
+                                    menuCarro.ApagarMenuCarro();
+                                    break;
+                        }
+                           
 
                       //  GerirMenu();
 

@@ -18,22 +18,22 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarBicicleta()
         {
-            Console.WriteLine("Digite o modelo da bicicleta: ");
+            Console.Write("Digite o modelo da bicicleta: ");
             modeloBicicleta[atual] = Console.ReadLine();
 
-            Console.WriteLine("Digite o ano da bicicleta: ");
+            Console.Write("Digite o ano da bicicleta: ");
             anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Digite a cor da bicicleta: ");
+            Console.Write("Digite a cor da bicicleta: ");
             corBicicleta[atual] = Console.ReadLine();
 
-            Console.WriteLine("Digite o preço da bicicleta: ");
+            Console.Write("Digite o preço da bicicleta: ");
             precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Digite o peso da bicicleta: ");
+            Console.Write("Digite o peso da bicicleta: ");
             pesoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Digite quantos passageiros comporta: ");
+            Console.Write("Digite quantos passageiros comporta: ");
             comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             atual++;
@@ -65,22 +65,22 @@ namespace TrabalhoGrupoMecanica
                 }
                 if (posicao != 1)
                 {
-                    Console.WriteLine("Digite o modelo da bicicleta: ");
+                    Console.Write("Digite o modelo da bicicleta: ");
                     modeloBicicleta[atual] = Console.ReadLine();
 
-                    Console.WriteLine("Digite o ano da bicicleta: ");
+                    Console.Write("Digite o ano da bicicleta: ");
                     anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Digite a cor da bicicleta: ");
+                    Console.Write("Digite a cor da bicicleta: ");
                     corBicicleta[atual] = Console.ReadLine();
 
-                    Console.WriteLine("Digite o preço da bicicleta: ");
+                    Console.Write("Digite o preço da bicicleta: ");
                     precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Digite o peso da bicicleta: ");
+                    Console.Write("Digite o peso da bicicleta: ");
                     pesoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Digite quantos passageiros comporta: ");
+                    Console.Write("Digite quantos passageiros comporta: ");
                     comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Dados Alterados Com Sucesso: ");
                 }
@@ -95,7 +95,7 @@ namespace TrabalhoGrupoMecanica
 
         public void BuscarBicicleta()
         {
-            Console.WriteLine("Digite um Nome Para  ser Pesquisado:");
+            Console.Write("Digite um Nome Para  ser Pesquisado:");
             string nomeBuscado = Console.ReadLine();
             bool carroAchado = false;
             for (int i = 0; i < atual; i++)
