@@ -18,25 +18,6 @@ namespace TrabalhoGrupoMecanica
 
         public void CadastrarBicicleta()
         {
-            /*Console.Write("Digite o modelo da bicicleta: ");
-            modeloBicicleta[atual] = Console.ReadLine();
-
-            Console.Write("Digite o ano da bicicleta: ");
-            anoBicicleta[atual] = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Digite a cor da bicicleta: ");
-            corBicicleta[atual] = Console.ReadLine();
-
-            Console.Write("Digite o preço da bicicleta: ");
-            precoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Digite o peso da bicicleta: ");
-            pesoBicicleta[atual] = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Digite quantos passageiros comporta: ");
-            comportaQuantasPessoas[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Clear();
-            aual++;*/
             bool validarTexto = true;
             while (validarTexto == true)
             {
@@ -166,7 +147,7 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
                 }
             }
-
+            atual++;
         }
 
         public void ListarBicicleta()

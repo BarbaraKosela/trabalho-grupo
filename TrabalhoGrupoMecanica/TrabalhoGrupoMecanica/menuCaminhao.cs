@@ -16,19 +16,135 @@ namespace TrabalhoGrupoMecanica
         int atual = 0;
         public void CadastrarCaminhao()
         {
-            Console.WriteLine("Cadastramento de caminhão");
-            Console.Write("Digite o modelo do caminhao: ");
-            modeloCaminhao[atual] = Console.ReadLine();
-            Console.Write("Digite o ano de fabricação do caminhao: ");
-            anoFabricacaoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite a cor do caminhão: ");
-            corCaminhao[atual] = Console.ReadLine();
-            Console.Write("Digite o preço do caminhão: ");
-            precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Digite o peso do caminhão: ");
-            pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite quantos passageiros comporta: ");
-            comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+            bool validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite o modelo do caminhão: ");
+                    modeloCaminhao[atual] = Console.ReadLine();
+                    if (modeloCaminhao[atual].Length >= 5)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nome do caminhão deve conter no mínimo 5 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Nome invalido, digite novamente");
+                }
+            }
+            bool validarAnoFabricacao = true;
+            while (validarAnoFabricacao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o ano de fabricação: ");
+                    anoFabricacaoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (anoFabricacaoCaminhao[atual] >= 0)
+                    {
+                        validarAnoFabricacao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ano de fabricação invalida");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ano de fabricação deve constar apenas números");
+                }
+            }
+            validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Digite a cor do caminhão: ");
+                    corCaminhao[atual] = Console.ReadLine();
+                    validarTexto = false;
+                    if (corCaminhao[atual].Length >= 3)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cor do caminhão deve conter no mínimo 3 caracteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Cor do caminhão invalida, digite novamente");
+                }
+            }
+
+            bool validarPrecoCaminhao = true;
+            while (validarPrecoCaminhao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o preço do caminhão: ");
+                    precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
+                    if (precoCaminhao[atual] > 0)
+                    {
+                        validarPrecoCaminhao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Preço invalido, digite novamente");
+                }
+
+            }
+            bool validarPesoCaminhao = true;
+            while (validarPesoCaminhao == true)
+            {
+                try
+                {
+                    Console.Write("Digite o peso do caminhão: ");
+                    pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (pesoCaminhao[atual] > 0)
+                    {
+                        validarPesoCaminhao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Peso invalido, digite novamente");
+                }
+            }
+            bool validarPassageirosCaminhao = true;
+            while (validarPassageirosCaminhao == true)
+            {
+                try
+                {
+                    Console.Write("Digite quantos passageiros comporta: ");
+                    comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (comportaQuantasPessoasCaminhao[atual] > 0)
+                    {
+                        validarPassageirosCaminhao = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                }
+            }
             Console.Clear();
             atual++;
         }
@@ -57,19 +173,135 @@ namespace TrabalhoGrupoMecanica
             }
             if (posicao != -1)
             {
-                Console.WriteLine("Cadastramento de caminhões");
-                Console.Write("Digite o modelo do caminhão: ");
-                modeloCaminhao[posicao] = Console.ReadLine();
-                Console.Write("Digite o ano de fabricação do caminhão: ");
-                anoFabricacaoCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Digite a cor do caminhão: ");
-                corCaminhao[posicao] = Console.ReadLine();
-                Console.Write("Digite o preço do caminhão: ");
-                precoCaminhao[posicao] = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Digite o peso do caminhão: ");
-                pesoCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Digite quantos passageiros comporta: ");
-                comportaQuantasPessoasCaminhao[posicao] = Convert.ToInt32(Console.ReadLine());
+                bool validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o modelo do caminhão: ");
+                        modeloCaminhao[atual] = Console.ReadLine();
+                        if (modeloCaminhao[atual].Length >= 5)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nome do caminhão deve conter no mínimo 5 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Nome invalido, digite novamente");
+                    }
+                }
+                bool validarAnoFabricacao = true;
+                while (validarAnoFabricacao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o ano de fabricação: ");
+                        anoFabricacaoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (anoFabricacaoCaminhao[atual] >= 0)
+                        {
+                            validarAnoFabricacao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ano de fabricação invalida");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Ano de fabricação deve constar apenas números");
+                    }
+                }
+                validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite a cor do caminhão: ");
+                        corCaminhao[atual] = Console.ReadLine();
+                        validarTexto = false;
+                        if (corCaminhao[atual].Length >= 3)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cor do caminhão deve conter no mínimo 3 caracteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Cor do caminhão invalida, digite novamente");
+                    }
+                }
+
+                bool validarPrecoCaminhao = true;
+                while (validarPrecoCaminhao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o preço do caminhão: ");
+                        precoCaminhao[atual] = Convert.ToDouble(Console.ReadLine());
+                        if (precoCaminhao[atual] > 0)
+                        {
+                            validarPrecoCaminhao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Preço invalido, digite novamente");
+                    }
+
+                }
+                bool validarPesoCaminhao = true;
+                while (validarPesoCaminhao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite o peso do caminhão: ");
+                        pesoCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (pesoCaminhao[atual] > 0)
+                        {
+                            validarPesoCaminhao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Peso invalido, digite novamente");
+                    }
+                }
+                bool validarPassageirosCaminhao = true;
+                while (validarPassageirosCaminhao == true)
+                {
+                    try
+                    {
+                        Console.Write("Digite quantos passageiros comporta: ");
+                        comportaQuantasPessoasCaminhao[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (comportaQuantasPessoasCaminhao[atual] > 0)
+                        {
+                            validarPassageirosCaminhao = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                    }
+                }
             }
             else
             {
