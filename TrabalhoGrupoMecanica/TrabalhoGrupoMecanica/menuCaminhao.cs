@@ -161,11 +161,12 @@ namespace TrabalhoGrupoMecanica
                     Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
                 }
             }
+            atual++;
             somaValoresCaminhao = precoCaminhao[atual] + somaValoresCaminhao;
             somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCaminhao[atual];
             somaPesoCaminhao = pesoCaminhao[atual] + somaPesoCaminhao;
             Console.Clear();
-            atual++;
+            
         }
         public void ListarCaminhao()
         {
