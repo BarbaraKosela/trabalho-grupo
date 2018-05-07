@@ -360,7 +360,7 @@ namespace TrabalhoGrupoMecanica
         public void MediaPrecoCarros()
         {
             double mediaPreco = somaPrecoCarros / atual;
-            Console.WriteLine("Média de peso dos carros: " + mediaPreco);
+            Console.WriteLine("Média de preçifo dos carros: " + mediaPreco);
         }
 
         public void MediaAnosCarros()

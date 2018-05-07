@@ -23,6 +23,7 @@ namespace TrabalhoGrupoMecanica
         double aviaoMaiorPreco = double.MinValue;
         double aviaoMenorPreco = double.MaxValue;
         int atual = 0;
+        double somaPrecoAvioes = 0, somaPesoAvioes = 0, somaAnoFabricacaoAvioes = 0;
 
         
         
@@ -319,6 +320,8 @@ namespace TrabalhoGrupoMecanica
 
 
                 Console.Clear();
+                
+                    
 
                     Console.WriteLine("Dados alterados com sucesso");
             }
@@ -328,6 +331,11 @@ namespace TrabalhoGrupoMecanica
             {
                 Console.WriteLine("Registro nao encontrado");
             }
+                Console.Clear();
+                somaPrecoAvioes = somaPrecoAvioes + aviaoPreco[atual];
+                somaPesoAvioes = somaPesoAvioes + aviaoPeso[atual];
+                somaAnoFabricacaoAvioes = somaAnoFabricacaoAvioes + aviaoAno[atual];
+                atual++;
         }
 
          public void ListarAvioes()
@@ -359,6 +367,9 @@ namespace TrabalhoGrupoMecanica
              {
                  Console.WriteLine("Modelo de avião não encontrado");
              }
+
+
+
          }
 
 
@@ -368,42 +379,63 @@ namespace TrabalhoGrupoMecanica
 
          public void TotalAvioes()
          {
-             
+             Console.WriteLine("Total de aviões: " + atual);
          }
 
          public void MediaPrecoAviao()
          {
-             
+             double mediaPrecoAvioes = somaPrecoAvioes / atual;
+             Console.WriteLine("Média de preço de aviões: " + mediaPrecoAvioes);
          }
 
          public void MediaAnosCarros()
          {
-             
+             double mediaAnosAviao = somaAnoFabricacaoAvioes / atual;
+             Console.WriteLine("Média de ano de fabricação dos aviões: " + mediaAnosAviao);
          }
 
          public void MediaPesosAviao()
          {
-             
+             double mediaPesosAviao = somaPesoAvioes / atual;
+             Console.WriteLine("Média de pesos dos aviões: " + mediaPesosAviao);
          }
 
          public void AviaoComMaiorPreco()
          {
-             
+             if (aviaoPreco[atual] > aviaoMaiorPreco)
+             {
+                 aviaoMaiorPreco = aviaoPreco[atual];
+             }
+
+             Console.WriteLine("Preço do avião mais caro: " + aviaoMaiorPreco);
          }
 
          public void AviaoMaiorAnoFabricacao()
          {
-             
+             if (aviaoAno[atual] > aviaoMaiorAnoFabricacao)
+             {
+                 aviaoMaiorAnoFabricacao = aviaoAno[atual];
+
+             }
+             Console.WriteLine("Ano de fabricação mais recente: " + aviaoMaiorAnoFabricacao);
          }
 
          public void AviaoComMaiorPeso()
          {
-             
+             if (aviaoPeso[atual] > aviaoMaiorPeso)
+             {
+                 aviaoMaiorPeso = aviaoPeso[atual];
+             }
+             Console.WriteLine("Peso do avião mais pesado: " + aviaoMaiorPeso);
          }
 
          public void AviaoComMenorPreco()
          {
-             
+             if (aviaoPreco[atual] < aviaoMenorPreco)
+             {
+                 aviaoMenorPreco = aviaoPreco[atual];
+             }
+             Console.WriteLine("Preço do carro mais barato: " + aviaoMenorPreco);
          }
 
          public void AviaoComMenorAnoFabricacao()
