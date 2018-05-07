@@ -418,7 +418,7 @@ namespace TrabalhoGrupoMecanica
             {
                 menorAnoFabricacao = anoFabricacaoCarros[atual];
             }
-            Console.WriteLine("Maior ano fabricação: " + menorAnoFabricacao);
+            Console.WriteLine("Ano de fabricação menor recente: " + menorAnoFabricacao);
         }
 
         public void CarroComMenorPeso()

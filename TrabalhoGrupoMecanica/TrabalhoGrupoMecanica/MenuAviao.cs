@@ -440,12 +440,20 @@ namespace TrabalhoGrupoMecanica
 
          public void AviaoComMenorAnoFabricacao()
          {
-             
+             if (aviaoAno[atual] < aviaoMenorAnoFabricacao)
+             {
+                 aviaoMenorAnoFabricacao = aviaoAno[atual];
+             }
+             Console.WriteLine("Ano de fabricação menor recente: " + aviaoMenorAnoFabricacao);
          }
 
          public void AviaoComMenorPeso()
          {
-             
+             if (aviaoPeso[atual] < aviaoMenorPeso)
+             {
+                 aviaoMenorPeso = aviaoPeso[atual];
+             }
+             Console.WriteLine("Preço do carro mais barato: " + aviaoMenorPeso);
          }
          public void AviaoApagarMenu()
         {
