@@ -384,12 +384,16 @@ namespace TrabalhoGrupoMecanica
         
         public void CaminhaoComMaiorPreco()
         {
-            if (precoCaminhao[atual] > caminhaoMaiorPreco)
+            for (int i = 0; i < precoCaminhao.Length; i++)
             {
-                caminhaoMaiorPreco = precoCaminhao[atual];
+                if (precoCaminhao[i] > caminhaoMaiorPreco)
+                {
+                    caminhaoMaiorPreco = precoCaminhao[i];
+                }
+                Console.Clear();
+                Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
             }
-            Console.Clear();
-            Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
+
         }
 
         public void CaminhaoMaiorAnoFabricacao()
@@ -399,7 +403,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Maior ano de fabricação caminhão" + caminhaoMaiorAnoFabricacao);
+            Console.WriteLine("Maior ano de fabricação caminhão: " + caminhaoMaiorAnoFabricacao);
         }
 
         public void CaminhaoComMaiorPeso()
