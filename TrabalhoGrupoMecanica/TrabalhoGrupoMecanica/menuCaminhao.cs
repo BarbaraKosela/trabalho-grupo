@@ -13,8 +13,8 @@ namespace TrabalhoGrupoMecanica
         double[] precoCaminhao = new double[100];
         double[] pesoCaminhao = new double[100];
         int[] comportaQuantasPessoasCaminhao = new int[100];
-        double caminhaoMaiorPeso = double.MinValue;
-        double caminhaoMenorPeso = double.MaxValue;
+        double caminhaoMaiorPeso = Int32.MinValue;
+        double caminhaoMenorPeso = Int32.MaxValue;
         int caminhaoMenorAnoFabricacao = int.MinValue;
         int caminhaoMaiorAnoFabricacao = int.MaxValue;
         double caminhaoMaiorPreco = double.MinValue;
@@ -162,9 +162,9 @@ namespace TrabalhoGrupoMecanica
                 }
             }
             atual++;
-            somaValoresCaminhao = precoCaminhao[atual] + somaValoresCaminhao;
-            somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCaminhao[atual];
-            somaPesoCaminhao = pesoCaminhao[atual] + somaPesoCaminhao;
+            //somaValoresCaminhao = precoCaminhao[atual] + somaValoresCaminhao;
+            //somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCaminhao[atual];
+            //somaPesoCaminhao = pesoCaminhao[atual] + somaPesoCaminhao;
             Console.Clear();
             
         }
@@ -362,6 +362,10 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPrecoCaminhao()
         {
+            for (int i = 0; i < precoCaminhao.Length; i++)
+            {
+                somaValoresCaminhao = somaValoresCaminhao + precoCaminhao[i];
+            }
             double mediaPreco = somaValoresCaminhao / atual;
             Console.Clear();
             Console.WriteLine("Média de preço: " + mediaPreco);
@@ -370,6 +374,10 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaAnosCaminhao()
         {
+            for (int i = 0; i < anoFabricacaoCaminhao.Length; i++)
+            {
+                somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCaminhao[i];
+            }
             double mediaAnosCaminhao = somaAnoFabricacao / atual;
             Console.Clear();
             Console.WriteLine("Média anos de fabricação: " + mediaAnosCaminhao);
@@ -377,6 +385,10 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPesosCaminhao()
         {
+            for (int i = 0; i < pesoCaminhao.Length; i++)
+            {
+                somaPesoCaminhao = somaPesoCaminhao + pesoCaminhao[i];
+            }
             double mediaPesosCaminhao = somaPesoCaminhao / atual;
             Console.Clear();
             Console.WriteLine("Média de pesos dos caminhões: " + mediaPesosCaminhao);

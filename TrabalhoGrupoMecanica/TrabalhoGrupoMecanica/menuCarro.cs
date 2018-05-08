@@ -160,9 +160,9 @@ namespace TrabalhoGrupoMecanica
                 }
             }
             Console.Clear();
-            somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
-            somaPesoCarros = somaPesoCarros + pesoCarros[atual];
-            somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[atual];
+            //somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
+            //somaPesoCarros = somaPesoCarros + pesoCarros[atual];
+            //somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[atual];
             atual++;
         }
         public void ListarCarros()
@@ -359,14 +359,22 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPrecoCarros()
         {
+            for (int i = 0; i < precoCarros.Length; i++)
+            {
+                somaPrecoCarros = somaPrecoCarros + precoCarros[i];
+            }
             Console.Clear();
-            double mediaPreco = somaPrecoCarros / atual;
-            Console.WriteLine("Média de preçifo dos carros: " + mediaPreco);
+            double mediaPreco = ( somaPrecoCarros ) / atual;
+            Console.WriteLine("Média de preço dos carros: " + mediaPreco);
         }
 
         public void MediaAnosCarros()
         {
-            Console.Clear();
+            for (int i = 0; i < anoFabricacaoCarros.Length; i++)
+            {
+                somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[i];
+            }
+                Console.Clear();
             int mediaAnosCarros = somaAnoFabricacao / atual;
             Console.WriteLine("Média ano dos carros: " + mediaAnosCarros);
             
@@ -374,7 +382,11 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPesosCarros()
         {
-            Console.Clear();
+            for (int i = 0; i < pesoCarros.Length; i++)
+            {
+                somaPesoCarros = somaPesoCarros + pesoCarros[i];
+            }
+                Console.Clear();
             double mediaPesosCarros = somaPesoCarros / atual;
             Console.WriteLine("Média peso dos carros: " + mediaPesosCarros);
         }
