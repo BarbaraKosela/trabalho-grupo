@@ -353,13 +353,18 @@ namespace TrabalhoGrupoMecanica
                 break;
                 if (!MotoAchada)
                 {
-                    Console.WriteLine("Carro Não encontrado: ");
+                    Console.WriteLine("Moto Não encontrada: ");
                 }
             }
         }
         public void MediaPrecoMoto()
         {
-            double mediaPreco = somaValorMoto / atual;
+            for (int i = 0; i < precoMoto.Length; i++)
+            {
+                somaValorMoto = somaValorMoto + precoMoto[i];
+            }
+            double mediaPreco = (somaValorMoto) / atual;
+        
             Console.WriteLine("Média de preço das Motos: " + mediaPreco);
         }
 
@@ -369,14 +374,22 @@ namespace TrabalhoGrupoMecanica
         }
         public void MediaAnosMoto()
         {
-            int mediaAnoFabricacao = somaAnoFabricacao / atual;
+            for (int i = 0; i < anoMoto.Length; i++)
+            {
+                somaAnoFabricacao = somaAnoFabricacao + anoMoto[i];
+            }
+            int mediaAnoFabricacao = (somaAnoFabricacao) / atual;
             Console.WriteLine("Média de ano de fabricação das Motos: " + mediaAnoFabricacao);
         }
 
         public void MediaPesosMoto()
         {
+            for (int i = 0; i < pesoMoto.Length; i++)
+            {
+                somaValorMoto = somaValorMoto + pesoMoto[i];
+            }
             double mediaPesoMoto = somaPesoMoto / atual;
-            Console.WriteLine("Média de ano de fabricação das bicicicletas: " + mediaPesoMoto);
+            Console.WriteLine("Média de ano de fabricação das Motos: " + mediaPesoMoto);
         }
 
         public void MotoComMaiorPreco()
@@ -412,8 +425,8 @@ namespace TrabalhoGrupoMecanica
                 {
                     motoMaiorPeso = pesoMoto[i];
                 }
-                Console.WriteLine("Peso da Moto que possui maior peso: " + motoMaiorPeso);
             }
+                Console.WriteLine("Peso da Moto que possui maior peso: " + motoMaiorPeso);
         }
 
         public void MotoComMenorPreco()
