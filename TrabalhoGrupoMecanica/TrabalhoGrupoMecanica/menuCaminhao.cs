@@ -389,7 +389,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMaiorPreco = precoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
+            Console.WriteLine("Camininhão mais caro: " + caminhaoMaiorPreco);
         }
 
         public void CaminhaoMaiorAnoFabricacao()
@@ -399,7 +399,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Maior ano de fabricação caminhão" + caminhaoMaiorAnoFabricacao);
+            Console.WriteLine("Ano de fabricação mais recente: " + caminhaoMaiorAnoFabricacao);
         }
 
         public void CaminhaoComMaiorPeso()
@@ -409,7 +409,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMaiorPeso = pesoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Maior peso de caminhão" + caminhaoMaiorPeso);
+            Console.WriteLine("Maior peso dos caminhões: " + caminhaoMaiorPeso);
         }
 
         public void CaminhaoComMenorPreco()
@@ -419,7 +419,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMenorPreco = precoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Maior preço de caminhão" + caminhaoMenorPeso);
+            Console.WriteLine("Preço do caminhão mais barato: " + caminhaoMenorPeso);
         }
 
         public void CaminhaoComMenorAnoFabricacao()
@@ -429,7 +429,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Menor ano de fabricação caminhão" + caminhaoMenorAnoFabricacao);
+            Console.WriteLine("Ano de fabricação menos recente: " + caminhaoMenorAnoFabricacao);
         }
 
         public void CaminhaoComMenorPeso()
@@ -439,7 +439,7 @@ namespace TrabalhoGrupoMecanica
                 caminhaoMenorPeso = pesoCaminhao[atual];
             }
             Console.Clear();
-            Console.WriteLine("Menor peso caminhão" + caminhaoMenorPeso);
+            Console.WriteLine("Peso do caminhão mais leve: " + caminhaoMenorPeso);
         }
 
 

@@ -380,18 +380,21 @@ namespace TrabalhoGrupoMecanica
     public void MediaPrecoOnibus()
     {
         double mediaPrecoOnibus = somaPrecoOnibus / atual;
+        Console.Clear();
         Console.WriteLine("Média de preço de ônibus: " + mediaPrecoOnibus);
     }
 
     public void MediaAnosOnibus()
     {
         double mediaAnosOnibus = somaAnoFabricacaoOnibus / atual;
+        Console.Clear();
         Console.WriteLine("Média de ano de fabricação dos ônibus: " + mediaAnosOnibus);
     }
 
     public void MediaPesosOnibus()
     {
         double mediaPesosOnibus = somaPesoOnibus / atual;
+        Console.Clear();
         Console.WriteLine("Média de pesos dos ônibus: " + mediaPesosOnibus);
     }
 
@@ -401,7 +404,7 @@ namespace TrabalhoGrupoMecanica
         {
             onibusMaiorPreco = onibusPreco[atual];
         }
-
+        Console.Clear();
         Console.WriteLine("Preço do ônibus mais caro: " + onibusMaiorPreco);
     }
 
@@ -412,6 +415,7 @@ namespace TrabalhoGrupoMecanica
             onibusMaiorAnoFabricacao = onibusAno[atual];
 
         }
+        Console.Clear();
         Console.WriteLine("Ano de fabricação mais recente: " + onibusMaiorAnoFabricacao);
     }
 
@@ -421,6 +425,7 @@ namespace TrabalhoGrupoMecanica
         {
             onibusMaiorPeso = onibusPeso[atual];
         }
+        Console.Clear();
         Console.WriteLine("Peso do ônibus mais pesado: " + onibusMaiorPeso);
     }
 
@@ -430,6 +435,7 @@ namespace TrabalhoGrupoMecanica
         {
             onibusMenorPreco = onibusPreco[atual];
         }
+        Console.Clear();
         Console.WriteLine("Preço do ônibus mais barato: " + onibusMenorPreco);
     }
 
@@ -439,6 +445,7 @@ namespace TrabalhoGrupoMecanica
         {
             onibusMenorAnoFabricacao = onibusAno[atual];
         }
+        Console.Clear();
         Console.WriteLine("Ano de fabricação menos recente: " + onibusMenorAnoFabricacao);
     }
 
@@ -448,6 +455,7 @@ namespace TrabalhoGrupoMecanica
         {
             onibusMenorPeso = onibusPeso[atual];
         }
+        Console.Clear();
         Console.WriteLine("Preço do ônibus mais barato: " + onibusMenorPeso);
     }
 
