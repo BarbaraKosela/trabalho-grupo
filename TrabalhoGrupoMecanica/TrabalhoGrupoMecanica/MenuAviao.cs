@@ -402,9 +402,13 @@ namespace TrabalhoGrupoMecanica
 
          public void AviaoComMaiorPreco()
          {
-             if (aviaoPreco[atual] > aviaoMaiorPreco)
+             for (int i = 0; i < aviaoPreco.Length; i++)
              {
-                 aviaoMaiorPreco = aviaoPreco[atual];
+
+                 if (aviaoPreco[i] > aviaoMaiorPreco)
+                 {
+                     aviaoMaiorPreco = aviaoPreco[i];
+                 }
              }
 
              Console.WriteLine("Preço do avião mais caro: " + aviaoMaiorPreco);
@@ -412,49 +416,82 @@ namespace TrabalhoGrupoMecanica
 
          public void AviaoMaiorAnoFabricacao()
          {
-             if (aviaoAno[atual] > aviaoMaiorAnoFabricacao)
+             for (int i = 0; i < aviaoAno.Length; i++)
              {
-                 aviaoMaiorAnoFabricacao = aviaoAno[atual];
 
+
+                 if (aviaoAno[i] > aviaoMaiorAnoFabricacao)
+                 {
+                     aviaoMaiorAnoFabricacao = aviaoAno[i];
+
+                 }
+                 
              }
              Console.WriteLine("Ano de fabricação mais recente: " + aviaoMaiorAnoFabricacao);
          }
 
          public void AviaoComMaiorPeso()
          {
-             if (aviaoPeso[atual] > aviaoMaiorPeso)
+             for (int i = 0; i < aviaoPeso.Length; i++)
              {
-                 aviaoMaiorPeso = aviaoPeso[atual];
+
+
+                 if (aviaoPeso[i] > aviaoMaiorPeso)
+                 {
+                     aviaoMaiorPeso = aviaoPeso[i];
+                 }
+                
              }
              Console.WriteLine("Peso do avião mais pesado: " + aviaoMaiorPeso);
          }
 
+
          public void AviaoComMenorPreco()
          {
-             if (aviaoPreco[atual] < aviaoMenorPreco)
+             for (int i = 0; i < aviaoPreco.Length; i++)
              {
-                 aviaoMenorPreco = aviaoPreco[atual];
+
+
+                 if (aviaoPreco[i] < aviaoMenorPreco)
+                 {
+                     aviaoMenorPreco = aviaoPreco[i];
+                 }
              }
-             Console.WriteLine("Preço do carro mais barato: " + aviaoMenorPreco);
+                 Console.WriteLine("Preço do carro mais barato: " + aviaoMenorPreco);
          }
+
 
          public void AviaoComMenorAnoFabricacao()
          {
-             if (aviaoAno[atual] < aviaoMenorAnoFabricacao)
+             for (int i = 0; i < aviaoAno.Length; i++)
              {
-                 aviaoMenorAnoFabricacao = aviaoAno[atual];
+
+
+                 if (aviaoAno[i] < aviaoMenorAnoFabricacao)
+                 {
+                     aviaoMenorAnoFabricacao = aviaoAno[i];
+                 }
+                 
              }
              Console.WriteLine("Ano de fabricação menos recente: " + aviaoMenorAnoFabricacao);
          }
 
+
          public void AviaoComMenorPeso()
          {
-             if (aviaoPeso[atual] < aviaoMenorPeso)
+             for (int i = 0; i < aviaoPeso.Length; i++)
              {
-                 aviaoMenorPeso = aviaoPeso[atual];
+
+
+                 if (aviaoPeso[i] < aviaoMenorPeso)
+                 {
+                     aviaoMenorPeso = aviaoPeso[i];
+                 }
+                 
              }
              Console.WriteLine("Preço do carro mais barato: " + aviaoMenorPeso);
          }
+
          public void AviaoApagarMenu()
         {
             Console.Clear();
