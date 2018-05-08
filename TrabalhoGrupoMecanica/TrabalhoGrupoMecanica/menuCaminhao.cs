@@ -390,37 +390,46 @@ namespace TrabalhoGrupoMecanica
                 {
                     caminhaoMaiorPreco = precoCaminhao[i];
                 }
-                Console.Clear();
-                Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
             }
-
+            Console.Clear();
+            Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
         }
 
         public void CaminhaoMaiorAnoFabricacao()
         {
-            if(anoFabricacaoCaminhao[atual] > caminhaoMaiorAnoFabricacao)
+            for (int i = 0; i < anoFabricacaoCaminhao.Length; i++)
             {
-                caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                if (anoFabricacaoCaminhao[atual] > caminhaoMaiorAnoFabricacao)
+                {
+                    caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                }                                        
             }
+
             Console.Clear();
             Console.WriteLine("Maior ano de fabricação caminhão: " + caminhaoMaiorAnoFabricacao);
         }
 
         public void CaminhaoComMaiorPeso()
         {
-            if (pesoCaminhao[atual] > caminhaoMaiorPeso)
+            for (int i = 0; i < pesoCaminhao.Length; i++)
             {
-                caminhaoMaiorPeso = pesoCaminhao[atual];
-            }
+                if (pesoCaminhao[atual] > caminhaoMaiorPeso)
+                {
+                    caminhaoMaiorPeso = pesoCaminhao[atual];
+                }
+            } 
             Console.Clear();
             Console.WriteLine("Maior peso de caminhão" + caminhaoMaiorPeso);
         }
 
         public void CaminhaoComMenorPreco()
         {
-            if (precoCaminhao[atual] < caminhaoMenorPreco)
+            for (int i = 0; i < precoCaminhao.Length; i++) 
             {
-                caminhaoMenorPreco = precoCaminhao[atual];
+                if (precoCaminhao[atual] < caminhaoMenorPreco)
+                {
+                    caminhaoMenorPreco = precoCaminhao[atual];
+                } 
             }
             Console.Clear();
             Console.WriteLine("Maior preço de caminhão" + caminhaoMenorPeso);
@@ -428,9 +437,12 @@ namespace TrabalhoGrupoMecanica
 
         public void CaminhaoComMenorAnoFabricacao()
         {
-            if(anoFabricacaoCaminhao[atual] < caminhaoMenorAnoFabricacao)
+            for (int i = 0; i < anoFabricacaoCaminhao.Length; i++)
             {
-                caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                if (anoFabricacaoCaminhao[atual] < caminhaoMenorAnoFabricacao)
+                {
+                    caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                }
             }
             Console.Clear();
             Console.WriteLine("Menor ano de fabricação caminhão" + caminhaoMenorAnoFabricacao);
@@ -438,15 +450,16 @@ namespace TrabalhoGrupoMecanica
 
         public void CaminhaoComMenorPeso()
         {
-            if(pesoCaminhao[atual] < caminhaoMenorPeso)
+            for (int i = 0; i < pesoCaminhao.Length; i++)
             {
-                caminhaoMenorPeso = pesoCaminhao[atual];
+                if (pesoCaminhao[atual] < caminhaoMenorPeso)
+                {
+                    caminhaoMenorPeso = pesoCaminhao[atual];
+                }
             }
             Console.Clear();
             Console.WriteLine("Menor peso caminhão" + caminhaoMenorPeso);
         }
-
-
         public void ApagarMenuCaminhao()
         {
             Console.Clear();
