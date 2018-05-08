@@ -444,7 +444,7 @@ namespace TrabalhoGrupoMecanica
              {
                  aviaoMenorAnoFabricacao = aviaoAno[atual];
              }
-             Console.WriteLine("Ano de fabricação menor recente: " + aviaoMenorAnoFabricacao);
+             Console.WriteLine("Ano de fabricação menos recente: " + aviaoMenorAnoFabricacao);
          }
 
          public void AviaoComMenorPeso()

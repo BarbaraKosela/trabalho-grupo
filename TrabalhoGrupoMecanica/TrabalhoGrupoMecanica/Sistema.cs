@@ -20,7 +20,7 @@ namespace TrabalhoGrupoMecanica
         public void Menu()
         {
             Console.WriteLine("O que deseja cadastrar?\n");
-            Console.WriteLine(@"1 - carros
+            Console.WriteLine(@"1 - Carros
 2 - Bicicletas
 3 - Motos
 4 - Aviões
