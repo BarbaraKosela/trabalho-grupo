@@ -160,9 +160,9 @@ namespace TrabalhoGrupoMecanica
                 }
             }
             Console.Clear();
-            somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
-            somaPesoCarros = somaPesoCarros + pesoCarros[atual];
-            somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[atual];
+            //somaPrecoCarros = somaPrecoCarros + precoCarros[atual];
+            //somaPesoCarros = somaPesoCarros + pesoCarros[atual];
+            //somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[atual];
             atual++;
         }
         public void ListarCarros()
@@ -359,14 +359,22 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPrecoCarros()
         {
+            for (int i = 0; i < precoCarros.Length; i++)
+            {
+                somaPrecoCarros = somaPrecoCarros + precoCarros[i];
+            }
             Console.Clear();
-            double mediaPreco = somaPrecoCarros / atual;
-            Console.WriteLine("Média de preçifo dos carros: " + mediaPreco);
+            double mediaPreco = ( somaPrecoCarros ) / atual;
+            Console.WriteLine("Média de preço dos carros: " + mediaPreco);
         }
 
         public void MediaAnosCarros()
         {
-            Console.Clear();
+            for (int i = 0; i < anoFabricacaoCarros.Length; i++)
+            {
+                somaAnoFabricacao = somaAnoFabricacao + anoFabricacaoCarros[i];
+            }
+                Console.Clear();
             int mediaAnosCarros = somaAnoFabricacao / atual;
             Console.WriteLine("Média ano dos carros: " + mediaAnosCarros);
             
@@ -374,46 +382,62 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPesosCarros()
         {
-            Console.Clear();
+            for (int i = 0; i < pesoCarros.Length; i++)
+            {
+                somaPesoCarros = somaPesoCarros + pesoCarros[i];
+            }
+                Console.Clear();
             double mediaPesosCarros = somaPesoCarros / atual;
             Console.WriteLine("Média peso dos carros: " + mediaPesosCarros);
         }
 
         public void CarroComMaiorPreco()
         {
-            if (precoCarros[atual] > maiorPrecoCarro)
+            for (int i = 0; i < precoCarros.Length; i++)
             {
-                maiorPrecoCarro = precoCarros[atual];
+                if (precoCarros[i] > maiorPrecoCarro)
+                {
+                    maiorPrecoCarro = precoCarros[i];
+                }
             }
+
             Console.Clear();
             Console.WriteLine("Preço do carro mais caro: " + maiorPrecoCarro);
         }
 
         public void CarroMaiorAnoFabricacao()
         {
-            if (anoFabricacaoCarros[atual] > maiorAnoFabricacao)
-            {
-                maiorAnoFabricacao = anoFabricacaoCarros[atual];
-            }
+            for (int i = 0; i < anoFabricacaoCarros.Length; i++)
+                if (anoFabricacaoCarros[i] > maiorAnoFabricacao)
+                {
+                    maiorAnoFabricacao = anoFabricacaoCarros[i];
+                }
             Console.Clear();
             Console.WriteLine("Ano de fabricação mais recente: " + maiorAnoFabricacao);
         }
 
         public void CarroComMaiorPeso()
         {
-            if (pesoCarros[atual] > maiorPesoCarro)
+            for (int i = 0; i < pesoCarros.Length; i++)
             {
-                maiorPesoCarro = pesoCarros[atual];
+                if (pesoCarros[i] > maiorPesoCarro)
+                {
+                    maiorPesoCarro = pesoCarros[i];
+                }                
             }
+
             Console.Clear();
             Console.WriteLine("Peso do carro mais pesado: " + maiorPesoCarro);
         }
 
         public void CarroComMenorPreco()
         {
-            if (precoCarros[atual] < menorPrecoCarro)
+            for (int i = 0; i < precoCarros.Length; i++)
             {
-                menorPrecoCarro = precoCarros[atual];
+                if (precoCarros[i] < menorPrecoCarro)
+                {
+                    menorPrecoCarro = precoCarros[i];
+                }
             }
             Console.Clear();
             Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
@@ -421,20 +445,28 @@ namespace TrabalhoGrupoMecanica
 
         public void CarroComMenorAnoFabricacao()
         {
-            if (anoFabricacaoCarros[atual] < menorAnoFabricacao)
+            for (int i = 0; i < anoFabricacaoCarros.Length; i++)
             {
-                menorAnoFabricacao = anoFabricacaoCarros[atual];
+                if (anoFabricacaoCarros[i] < menorAnoFabricacao)
+                {
+                    menorAnoFabricacao = anoFabricacaoCarros[i];
+                }
             }
+
             Console.Clear();
             Console.WriteLine("Ano de fabricação menor recente: " + menorAnoFabricacao);
         }
 
         public void CarroComMenorPeso()
         {
-            if (pesoCarros[atual] < menorPesoCarro)
+            for (int i = 0; i < pesoCarros.Length; i++)
             {
-                menorPrecoCarro = pesoCarros[atual];
+                if (pesoCarros[i] < menorPesoCarro)
+                {
+                    menorPrecoCarro = pesoCarros[i];
+                }
             }
+
             Console.Clear();
             Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
         }
