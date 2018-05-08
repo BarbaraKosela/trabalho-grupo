@@ -402,7 +402,7 @@ namespace TrabalhoGrupoMecanica
                                 menuAviao.MediaPrecoAviao();
                                 break;
                             case 7:
-                                menuAviao.MediaAnosCarros();
+                                menuAviao.MediaAnosAviao();
                                 break;
                             case 8:
                                 menuAviao.MediaPesosAviao();
