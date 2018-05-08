@@ -381,54 +381,73 @@ namespace TrabalhoGrupoMecanica
 
         public void MotoComMaiorPreco()
         {
-            if (precoMoto[atual] > motoMaiorPreco)
+            for (int i = 0; i < precoMoto.Length; i++)
             {
-                motoMaiorPreco = precoMoto[atual];
+                if (precoMoto[i] > motoMaiorPreco)
+                {
+                    motoMaiorPreco = precoMoto[i];
+                }
             }
             Console.WriteLine("Preço da Moto que possui menor preço: " + motoMaiorPreco);
         }
 
         public void MotoMaiorAnoFabricacao()
         {
-            if (anoMoto[atual] > motoMaiorAnoFabricacao)
+            for (int i = 0; i < anoMoto.Length; i++)
             {
-                motoMaiorAnoFabricacao = anoMoto[atual];
+                if (anoMoto[i] > motoMaiorAnoFabricacao)
+                {
+                    motoMaiorAnoFabricacao = anoMoto[i];
+                }
             }
+
             Console.WriteLine("Ano de fabricação da Moto que possui menor ano de fabricação: " + motoMaiorAnoFabricacao);
         }
 
         public void MotoComMaiorPeso()
         {
-            if (pesoMoto[atual] > motoMaiorPeso)
+            for (int i = 0; i < pesoMoto.Length; i++)
             {
-                motoMaiorPeso = pesoMoto[atual];
+                if (pesoMoto[i] > motoMaiorPeso)
+                {
+                    motoMaiorPeso = pesoMoto[i];
+                }
+                Console.WriteLine("Peso da Moto que possui maior peso: " + motoMaiorPeso);
             }
-            Console.WriteLine("Peso da Moto que possui maior peso: " + motoMaiorPeso);
         }
 
         public void MotoComMenorPreco()
         {
-            if (precoMoto[atual] < motoMenorPeso)
+            for (int i = 0; i < precoMoto.Length; i++)
             {
-                motoMenorPeso = precoMoto[atual];
+                if (precoMoto[i] < motoMenorPeso)
+                {
+                    motoMenorPeso = precoMoto[i];
+                }
             }
             Console.WriteLine("Preço da Moto que possui menor preço: " + motoMenorPreco);
         }
 
         public void MotoComMenorAnoFabricacao()
         {
-            if (anoMoto[atual] < motoMenorAnoFabricacao)
+            for (int i = 0; i < anoMoto.Length; i++)
             {
-                motoMenorAnoFabricacao = anoMoto[atual];
+                if (anoMoto[i] < motoMenorAnoFabricacao)
+                {
+                    motoMenorAnoFabricacao = anoMoto[i];
+                }
             }
             Console.WriteLine("Ano de fabricação da Moto que possui menor ano de fabricação: " + motoMenorAnoFabricacao);
         }
 
         public void MotoComMenorPeso()
         {
-            if (pesoMoto[atual] < motoMenorPeso)
+            for (int i = 0; i < pesoMoto.Length; i++)
             {
-                motoMenorPeso = pesoMoto[atual];
+                if (pesoMoto[i] < motoMenorPeso)
+                {
+                    motoMenorPeso = pesoMoto[i];
+                }
             }
             Console.WriteLine("Peso da Moto que possui menor peso: " + motoMenorPeso);
         }

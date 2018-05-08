@@ -382,54 +382,71 @@ namespace TrabalhoGrupoMecanica
 
         public void bicicletaComMaiorPreco()
         {
-            if (precoBicicleta[atual] > bicicletaMaiorPreco)
+            for (int i = 0; i < precoBicicleta.Length; i++)
             {
-                bicicletaMaiorPreco = pesoBicicleta[atual];
+                if (precoBicicleta[i] > bicicletaMaiorPreco)
+                {
+                    bicicletaMaiorPreco = pesoBicicleta[i];
+                }
             }
             Console.WriteLine("Preço da bicicleta mais barata: " + bicicletaMaiorPreco);
         }
 
         public void BicicletaComMaiorAnoFabricacao()
         {
-            if (anoBicicleta[atual] > bicicletaMaiorAnoFabricacao)
+            for(int i = 0; i < anoBicicleta.Length; i++){
+            if (anoBicicleta[i] > bicicletaMaiorAnoFabricacao)
             {
-                bicicletaMaiorAnoFabricacao = anoBicicleta[atual];
+                bicicletaMaiorAnoFabricacao = anoBicicleta[i];
             }
+        }
             Console.WriteLine("Ano de fabricação mais recente: " + bicicletaMaiorAnoFabricacao);
         }
 
         public void BicicletaComMaiorPeso()
         {
-            if(pesoBicicleta[atual] > bicicletaMaiorPeso)
+            for (int i = 0; i < pesoBicicleta.Length; i++)
             {
-                bicicletaMaiorPeso = pesoBicicleta[atual];
+                if (pesoBicicleta[i] > bicicletaMaiorPeso)
+                {
+                    bicicletaMaiorPeso = pesoBicicleta[i];
+                }
             }
             Console.WriteLine("Peso da bicicleta mais pesada: " + bicicletaMaiorPeso);
         }
 
         public void BicicletaComMenorPreco()
         {
-            if (precoBicicleta[atual] < bicicletaMenorPeso)
+            for (int i = 0; i < precoBicicleta.Length; i++)
             {
-                bicicletaMenorPeso = precoBicicleta[atual];
+                if (precoBicicleta[i] < bicicletaMenorPeso)
+                {
+                    bicicletaMenorPeso = precoBicicleta[i];
+                }
             }
             Console.WriteLine("Preço da bicicleta mais barata: " + bicicletaMenorPreco);
         }
 
         public void BicicletaComMenorAnoFabricacao()
         {
-            if(anoBicicleta[atual] < bicicletaMenorAnoFabricacao)
+            for (int i = 0; i < anoBicicleta.Length; i++)
             {
-                bicicletaMenorAnoFabricacao = anoBicicleta[atual];
+                if (anoBicicleta[i] < bicicletaMenorAnoFabricacao)
+                {
+                    bicicletaMenorAnoFabricacao = anoBicicleta[i];
+                }
             }
             Console.WriteLine("Ano de fabricação menos recente: " + bicicletaMenorAnoFabricacao);
         }
 
         public void BicicletaComMenorPeso()
         {
-            if(pesoBicicleta[atual] < bicicletaMenorPeso)
+            for (int i = 0; i < pesoBicicleta.Length; i++)
             {
-                bicicletaMenorPeso = pesoBicicleta[atual];
+                if (pesoBicicleta[i] < bicicletaMenorPeso)
+                {
+                    bicicletaMenorPeso = pesoBicicleta[i];
+                }
             }
             Console.WriteLine("Peso da bicicleta que possui menor peso: " + bicicletaMenorPeso);
         }
