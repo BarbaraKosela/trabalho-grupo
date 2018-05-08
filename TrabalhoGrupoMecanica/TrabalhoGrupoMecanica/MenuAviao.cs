@@ -329,7 +329,7 @@ namespace TrabalhoGrupoMecanica
 
             else
             {
-                Console.WriteLine("Registro nao encontrado");
+                Console.WriteLine("Registro não encontrado");
             }
                 Console.Clear();
                 somaPrecoAvioes = somaPrecoAvioes + aviaoPreco[atual];

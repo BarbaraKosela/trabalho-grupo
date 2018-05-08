@@ -40,7 +40,7 @@ namespace TrabalhoGrupoMecanica
                     }
                     else
                     {
-                        Console.WriteLine("Nome da biclceta deve conter no mínimo 5 caracteres");
+                        Console.WriteLine("Nome da bicicleta deve conter no mínimo 5 caracteres");
                     }
                 }
                 catch (Exception)
@@ -169,7 +169,7 @@ namespace TrabalhoGrupoMecanica
         public void ListarBicicleta()
         {
             Console.Clear();
-            Console.WriteLine("Listar Bicicleta: ");
+            Console.WriteLine("Lista de bicicletas cadastradas: ");
             for (int i = 0; i < atual; i++)
             {
                 Console.WriteLine(
@@ -181,7 +181,7 @@ namespace TrabalhoGrupoMecanica
 
         public void EditarBicicleta()
         {
-            Console.WriteLine("Digite um Nome Para Pesquisa: ");
+            Console.WriteLine("Digite um nome para Pesquisa: ");
             string nomeBicicletaPesquisada = Console.ReadLine().ToLower().Trim();
             int posicao = -1;
             for (int i = 0; i < atual; i++)
@@ -205,7 +205,7 @@ namespace TrabalhoGrupoMecanica
                             }
                             else
                             {
-                                Console.WriteLine("Nome da biclceta deve conter no mínimo 5 caracteres");
+                                Console.WriteLine("Nome da bicicleta deve conter no mínimo 5 caracteres");
                             }
                         }
                         catch (Exception)
@@ -287,8 +287,8 @@ namespace TrabalhoGrupoMecanica
                         try
                         {
                             Console.Write("Digite o peso da bicicleta: ");
-                            anoBicicleta[posicao] = Convert.ToInt32(Console.ReadLine());
-                            if (anoBicicleta[posicao] > 0)
+                            pesoBicicleta[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (pesoBicicleta[posicao] > 0)
                             {
                                 validarPesoBicicleta = false;
                             }
@@ -326,11 +326,11 @@ namespace TrabalhoGrupoMecanica
                     }
 
                 
-                Console.WriteLine("Dados Alterados Com Sucesso: ");
+                Console.WriteLine("Dados alterados com sucesso");
                 }
                 else
                 {
-                    Console.WriteLine("Registro Não Encontrado: ");
+                    Console.WriteLine("Registro não encontrado");
                 }
 
             }
@@ -339,21 +339,21 @@ namespace TrabalhoGrupoMecanica
 
         public void BuscarBicicleta()
         {
-            Console.Write("Digite um Nome Para  ser Pesquisado:");
+            Console.Write("Digite um nome para ser pesquisado: ");
             string nomeBuscado = Console.ReadLine();
-            bool carroAchado = false;
+            bool bicicletaAchado = false;
             for (int i = 0; i < atual; i++)
             {
                 Console.WriteLine(
                     string.Format(
                     "\nModelo da Bicicleta: {0} \nAno da Bicicleta: {1} \nCor da Bicicleta: {2} \nPreço da Bicicleta:{3} \n Peso daBicicleta: {4} \nComporta Quantos Passageiros:{5}", modeloBicicleta[i], anoBicicleta[i], corBicicleta[i], precoBicicleta[i], pesoBicicleta[i], comportaQuantasPessoas[i]));
 
-                carroAchado = true;
+                bicicletaAchado = true;
                 break;
             }
-            if (!carroAchado)
+            if (!bicicletaAchado)
             {
-                Console.WriteLine("Carro Não encontrado: ");
+                Console.WriteLine("Bicicleta não encontrada");
             }
         }
 
@@ -377,7 +377,7 @@ namespace TrabalhoGrupoMecanica
         public void MediaDosPesosDasBicicletas()
         {
             double mediaPesoBicicletas = somaPesoBicicletas / atual;
-            Console.WriteLine("Média de ano de fabricação das bicicicletas: " + mediaPesoBicicletas);
+            Console.WriteLine("Média de ano de fabricação das bicicletas: " + mediaPesoBicicletas);
          }
 
         public void bicicletaComMaiorPreco()
@@ -386,7 +386,7 @@ namespace TrabalhoGrupoMecanica
             {
                 bicicletaMaiorPreco = pesoBicicleta[atual];
             }
-            Console.WriteLine("Preço da bicicleta que possui menor preço: " + bicicletaMaiorPreco);
+            Console.WriteLine("Preço da bicicleta mais barata: " + bicicletaMaiorPreco);
         }
 
         public void BicicletaComMaiorAnoFabricacao()
@@ -395,7 +395,7 @@ namespace TrabalhoGrupoMecanica
             {
                 bicicletaMaiorAnoFabricacao = anoBicicleta[atual];
             }
-            Console.WriteLine("Ano de fabricação da bicicleta que possui menor ano de fabricação: " + bicicletaMaiorAnoFabricacao);
+            Console.WriteLine("Ano de fabricação mais recente: " + bicicletaMaiorAnoFabricacao);
         }
 
         public void BicicletaComMaiorPeso()
@@ -404,7 +404,7 @@ namespace TrabalhoGrupoMecanica
             {
                 bicicletaMaiorPeso = pesoBicicleta[atual];
             }
-            Console.WriteLine("Peso da bicicleta que possui maior peso: " + bicicletaMaiorPeso);
+            Console.WriteLine("Peso da bicicleta mais pesada: " + bicicletaMaiorPeso);
         }
 
         public void BicicletaComMenorPreco()
@@ -413,7 +413,7 @@ namespace TrabalhoGrupoMecanica
             {
                 bicicletaMenorPeso = precoBicicleta[atual];
             }
-            Console.WriteLine("Preço da bicicleta que possui menor preço: " + bicicletaMenorPreco);
+            Console.WriteLine("Preço da bicicleta mais barata: " + bicicletaMenorPreco);
         }
 
         public void BicicletaComMenorAnoFabricacao()
@@ -422,7 +422,7 @@ namespace TrabalhoGrupoMecanica
             {
                 bicicletaMenorAnoFabricacao = anoBicicleta[atual];
             }
-            Console.WriteLine("Ano de fabricação da bicicleta que possui menor ano de fabricação: " + bicicletaMenorAnoFabricacao);
+            Console.WriteLine("Ano de fabricação menos recente: " + bicicletaMenorAnoFabricacao);
         }
 
         public void BicicletaComMenorPeso()
