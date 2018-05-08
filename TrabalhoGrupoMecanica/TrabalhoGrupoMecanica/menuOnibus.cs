@@ -400,12 +400,16 @@ namespace TrabalhoGrupoMecanica
 
     public void OnibusComMaiorPreco()
     {
-        if (onibusPreco[atual] > onibusMaiorPreco)
+        for (int i = 0; i < onibusPreco.Length; i++)
         {
-            onibusMaiorPreco = onibusPreco[atual];
+
+            if (onibusPreco[i] > onibusMaiorPreco)
+            {
+                onibusMaiorPreco = onibusPreco[i];
+            }
+            Console.Clear();
+            Console.WriteLine("Preço do ônibus mais caro: " + onibusMaiorPreco);
         }
-        Console.Clear();
-        Console.WriteLine("Preço do ônibus mais caro: " + onibusMaiorPreco);
     }
 
     public void OnibusMaiorAnoFabricacao()
