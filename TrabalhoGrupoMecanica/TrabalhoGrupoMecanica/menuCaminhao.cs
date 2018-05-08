@@ -399,9 +399,9 @@ namespace TrabalhoGrupoMecanica
         {
             for (int i = 0; i < anoFabricacaoCaminhao.Length; i++)
             {
-                if (anoFabricacaoCaminhao[atual] > caminhaoMaiorAnoFabricacao)
+                if (anoFabricacaoCaminhao[i] > caminhaoMaiorAnoFabricacao)
                 {
-                    caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                    caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[i];
                 }                                        
             }
 
@@ -413,52 +413,52 @@ namespace TrabalhoGrupoMecanica
         {
             for (int i = 0; i < pesoCaminhao.Length; i++)
             {
-                if (pesoCaminhao[atual] > caminhaoMaiorPeso)
+                if (pesoCaminhao[i] > caminhaoMaiorPeso)
                 {
-                    caminhaoMaiorPeso = pesoCaminhao[atual];
+                    caminhaoMaiorPeso = pesoCaminhao[i];
                 }
             } 
             Console.Clear();
-            Console.WriteLine("Maior peso de caminhão" + caminhaoMaiorPeso);
+            Console.WriteLine("Maior peso de caminhão: " + caminhaoMaiorPeso);
         }
 
         public void CaminhaoComMenorPreco()
         {
             for (int i = 0; i < precoCaminhao.Length; i++) 
             {
-                if (precoCaminhao[atual] < caminhaoMenorPreco)
+                if (precoCaminhao[i] < caminhaoMenorPreco)
                 {
-                    caminhaoMenorPreco = precoCaminhao[atual];
+                    caminhaoMenorPreco = precoCaminhao[i];
                 } 
             }
             Console.Clear();
-            Console.WriteLine("Maior preço de caminhão" + caminhaoMenorPeso);
+            Console.WriteLine("Maior preço de caminhão: " + caminhaoMenorPeso);
         }
 
         public void CaminhaoComMenorAnoFabricacao()
         {
             for (int i = 0; i < anoFabricacaoCaminhao.Length; i++)
             {
-                if (anoFabricacaoCaminhao[atual] < caminhaoMenorAnoFabricacao)
+                if (anoFabricacaoCaminhao[i] < caminhaoMenorAnoFabricacao)
                 {
-                    caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
+                    caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[i];
                 }
             }
             Console.Clear();
-            Console.WriteLine("Menor ano de fabricação caminhão" + caminhaoMenorAnoFabricacao);
+            Console.WriteLine("Menor ano de fabricação caminhão: " + caminhaoMenorAnoFabricacao);
         }
 
         public void CaminhaoComMenorPeso()
         {
             for (int i = 0; i < pesoCaminhao.Length; i++)
             {
-                if (pesoCaminhao[atual] < caminhaoMenorPeso)
+                if (pesoCaminhao[i] < caminhaoMenorPeso)
                 {
-                    caminhaoMenorPeso = pesoCaminhao[atual];
+                    caminhaoMenorPeso = pesoCaminhao[i];
                 }
             }
             Console.Clear();
-            Console.WriteLine("Menor peso caminhão" + caminhaoMenorPeso);
+            Console.WriteLine("Menor peso caminhão: " + caminhaoMenorPeso);
         }
         public void ApagarMenuCaminhao()
         {
