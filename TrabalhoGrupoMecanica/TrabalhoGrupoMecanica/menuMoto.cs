@@ -11,14 +11,17 @@ namespace TrabalhoGrupoMecanica
         string[] corMoto = new string[100];
         double[] precoMoto = new double[100];
         double[] pesoMoto = new double[100];
-        int[] anoMoto = new int[100];
         int[] comportaQuantasPessoas = new int[100];
+        int[] anoMoto = new int[100];
         double motoMaiorPeso = double.MinValue;
         double motoMenorPeso = double.MaxValue;
-        int motooMenorAnoFabricacao = int.MinValue;
+        int motoMenorAnoFabricacao = int.MinValue;
         int motoMaiorAnoFabricacao = int.MaxValue;
         double motoMaiorPreco = double.MinValue;
         double motoMenorPreco = double.MaxValue;
+        double somaValorMoto = 0;
+        double somaPesoMoto = 0;
+        int somaAnoFabricacao = 0;
 
         int atual = 0;
 
@@ -163,67 +166,271 @@ namespace TrabalhoGrupoMecanica
 
         public void EditarMoto()
         {
-           
+            Console.WriteLine("Digite o Nome da Moto que Deseja Editar: ");
+            string nomemotoPesquisada = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomemotoPesquisada == modeloMoto[i])
+                {
+                    posicao = i;
+                }
+                if (posicao != 1)
+                {
+                    bool validarTexto = true;
+                    while (validarTexto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o modelo da Moto: ");
+                            modeloMoto[posicao] = Console.ReadLine();
+                            if (modeloMoto[posicao].Length >= 5)
+                            {
+                                validarTexto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nome da Moto deve conter no mínimo 5 caracteres");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Nome invalido, digite novamente");
+                        }
+                    }
+                    Console.WriteLine(" ");
+                    bool validarAnoFabricacao = true;
+                    while (validarAnoFabricacao == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o ano de fabricação: ");
+                            anoMoto[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (anoMoto[posicao] >= 0)
+                            {
+                                validarAnoFabricacao = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ano de fabricação invalida");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Ano de fabricação deve constar apenas números");
+                        }
+                    }
+                    Console.WriteLine(" ");
+                    validarTexto = true;
+                    while (validarTexto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite a cor da Moto: ");
+                            corMoto[posicao] = Console.ReadLine();                            
+                            if (corMoto[posicao].Length >= 3)
+                            {
+                                validarTexto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Cor da Moto deve conter no mínimo 3 caracteres");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Cor da Moto invalida, digite novamente");
+                        }
+                    }
+                    Console.WriteLine(" ");
+                    bool validarPrecoMoto = true;
+                    while (validarPrecoMoto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o preço da Moto: ");
+                            precoMoto[posicao] = Convert.ToDouble(Console.ReadLine());
+                            if (precoMoto[posicao] > 0)
+                            {
+                                validarPrecoMoto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Preço menor que zero é inexistente, digite novamente com um preço acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Preço invalido, digite novamente");
+                        }
+
+                    }
+                    Console.WriteLine(" ");
+                    bool validarPesoMoto = true;
+                    while (validarPesoMoto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite o peso da Moto: ");
+                            anoMoto[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (anoMoto[posicao] > 0)
+                            {
+                                validarPesoMoto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Peso menor que zero é inexistente, digite novamente com um peso acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Peso invalido, digite novamente");
+                        }
+                    }
+                    Console.WriteLine(" ");
+                    bool validarPassageirosMoto = true;
+                    while (validarPassageirosMoto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Digite quantos passageiros comporta: ");
+                            comportaQuantasPessoas[posicao] = Convert.ToInt32(Console.ReadLine());
+                            if (comportaQuantasPessoas[posicao] > 0)
+                            {
+                                validarPassageirosMoto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Quantidade de passageiros menor que zero é inexistente, digite novamente com um peso acima de zero");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
+                        }
+                    }
+
+                
+                Console.WriteLine("Dados Alterados Com Sucesso: ");
+                }
+                else
+                {
+                    Console.WriteLine("Registro Não Encontrado: ");
+                }
+
+            }
+
         }
+
+
 
         public void ListarMoto()
         {
-           
+            Console.Clear();
+            Console.WriteLine("Listar Moto: ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(
+                    string.Format(
+                    "\nModelo Da Moto: {0} \nAno da Moto: {1} \nCor da Moto: {2} \nPreço da Moto: {3}\nPeso da Moto:{4} \nComporta Quantos passageiros:{5}", modeloMoto[i], anoMoto[i], precoMoto[i], pesoMoto[i], comportaQuantasPessoas[i]));
+            }
         }
 
+
+
+        public void BuscarMoto()
+        {
+            Console.Write("Digite um Nome Para  ser Pesquisado:");
+            string nomeBuscado = Console.ReadLine();
+            bool MotoAchada = false;
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(
+                    string.Format(
+                    "\nModelo da Moto: {0} \nAno da Moto: {1} \nCor da Moto: {2} \nPreço da Moto:{3} \n Peso da Moto: {4} \nComporta Quantos Passageiros:{5}", modeloMoto[i], anoMoto[i], corMoto[i], precoMoto[i], pesoMoto[i], comportaQuantasPessoas[i]));
+
+                MotoAchada = true;
+                break;
+                if (!MotoAchada)
+                {
+                    Console.WriteLine("Carro Não encontrado: ");
+                }
+            }
+        }
         public void MediaPrecoMoto()
         {
-            
+            double mediaPreco = somaValorMoto / atual;
+            Console.WriteLine("Média de preço das Motos: " + mediaPreco);
         }
 
         public void TotalMoto()
         {
-            
+            Console.WriteLine("Total de Motos: " + atual);
         }
-
-        public void BuscarMoto()
-        {
-
-        }
-
         public void MediaAnosMoto()
         {
-            
+            int mediaAnoFabricacao = somaAnoFabricacao / atual;
+            Console.WriteLine("Média de ano de fabricação das Motos: " + mediaAnoFabricacao);
         }
 
         public void MediaPesosMoto()
         {
-
+            double mediaPesoMoto = somaPesoMoto / atual;
+            Console.WriteLine("Média de ano de fabricação das bicicicletas: " + mediaPesoMoto);
         }
 
         public void MotoComMaiorPreco()
         {
-           
+            if (precoMoto[atual] > motoMaiorPreco)
+            {
+                motoMaiorPreco = precoMoto[atual];
+            }
+            Console.WriteLine("Preço da Moto que possui menor preço: " + motoMaiorPreco);
         }
 
         public void MotoMaiorAnoFabricacao()
         {
-            
+            if (anoMoto[atual] > motoMaiorAnoFabricacao)
+            {
+                motoMaiorAnoFabricacao = anoMoto[atual];
+            }
+            Console.WriteLine("Ano de fabricação da Moto que possui menor ano de fabricação: " + motoMaiorAnoFabricacao);
         }
 
         public void MotoComMaiorPeso()
         {
-
+            if (pesoMoto[atual] > motoMaiorPeso)
+            {
+                motoMaiorPeso = pesoMoto[atual];
+            }
+            Console.WriteLine("Peso da Moto que possui maior peso: " + motoMaiorPeso);
         }
 
         public void MotoComMenorPreco()
         {
-
+            if (precoMoto[atual] < motoMenorPeso)
+            {
+                motoMenorPeso = precoMoto[atual];
+            }
+            Console.WriteLine("Preço da Moto que possui menor preço: " + motoMenorPreco);
         }
 
         public void MotoComMenorAnoFabricacao()
         {
-                
+            if (anoMoto[atual] < motoMenorAnoFabricacao)
+            {
+                motoMenorAnoFabricacao = anoMoto[atual];
+            }
+            Console.WriteLine("Ano de fabricação da Moto que possui menor ano de fabricação: " + motoMenorAnoFabricacao);
         }
 
         public void MotoComMenorPeso()
         {
-            
+            if (pesoMoto[atual] < motoMenorPeso)
+            {
+                motoMenorPeso = pesoMoto[atual];
+            }
+            Console.WriteLine("Peso da Moto que possui menor peso: " + motoMenorPeso);
         }
 
         public void MotoApagarMenu()
