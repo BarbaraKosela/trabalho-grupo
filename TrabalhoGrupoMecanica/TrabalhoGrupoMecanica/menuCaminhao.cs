@@ -363,6 +363,7 @@ namespace TrabalhoGrupoMecanica
         public void MediaPrecoCaminhao()
         {
             double mediaPreco = somaValoresCaminhao / atual;
+            Console.Clear();
             Console.WriteLine("Média de preço: " + mediaPreco);
 
         }
@@ -370,22 +371,24 @@ namespace TrabalhoGrupoMecanica
         public void MediaAnosCaminhao()
         {
             double mediaAnosCaminhao = somaAnoFabricacao / atual;
+            Console.Clear();
             Console.WriteLine("Média anos de fabricação: " + mediaAnosCaminhao);
         }
 
         public void MediaPesosCaminhao()
         {
             double mediaPesosCaminhao = somaPesoCaminhao / atual;
+            Console.Clear();
             Console.WriteLine("Média de pesos dos caminhões: " + mediaPesosCaminhao);
         }
-
+        
         public void CaminhaoComMaiorPreco()
         {
             if (precoCaminhao[atual] > caminhaoMaiorPreco)
             {
                 caminhaoMaiorPreco = precoCaminhao[atual];
             }
-
+            Console.Clear();
             Console.WriteLine("Maior preço do caminhão: " + caminhaoMaiorPreco);
         }
 
@@ -395,6 +398,7 @@ namespace TrabalhoGrupoMecanica
             {
                 caminhaoMaiorAnoFabricacao = anoFabricacaoCaminhao[atual];
             }
+            Console.Clear();
             Console.WriteLine("Maior ano de fabricação caminhão" + caminhaoMaiorAnoFabricacao);
         }
 
@@ -404,6 +408,8 @@ namespace TrabalhoGrupoMecanica
             {
                 caminhaoMaiorPeso = pesoCaminhao[atual];
             }
+            Console.Clear();
+            Console.WriteLine("Maior peso de caminhão" + caminhaoMaiorPeso);
         }
 
         public void CaminhaoComMenorPreco()
@@ -412,6 +418,7 @@ namespace TrabalhoGrupoMecanica
             {
                 caminhaoMenorPreco = precoCaminhao[atual];
             }
+            Console.Clear();
             Console.WriteLine("Maior preço de caminhão" + caminhaoMenorPeso);
         }
 
@@ -421,6 +428,7 @@ namespace TrabalhoGrupoMecanica
             {
                 caminhaoMenorAnoFabricacao = anoFabricacaoCaminhao[atual];
             }
+            Console.Clear();
             Console.WriteLine("Menor ano de fabricação caminhão" + caminhaoMenorAnoFabricacao);
         }
 
@@ -430,6 +438,7 @@ namespace TrabalhoGrupoMecanica
             {
                 caminhaoMenorPeso = pesoCaminhao[atual];
             }
+            Console.Clear();
             Console.WriteLine("Menor peso caminhão" + caminhaoMenorPeso);
         }
 
