@@ -487,7 +487,7 @@ namespace TrabalhoGrupoMecanica
 
     public void OnibusComMenorPeso()
     {
-        for (int i < 0; i < onibusPeso.Length; i++)
+        for (int i = 0; i < onibusPeso.Length; i++)
         {
 
             if (onibusPeso[i] < onibusMenorPeso)
