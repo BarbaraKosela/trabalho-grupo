@@ -384,18 +384,30 @@ namespace TrabalhoGrupoMecanica
 
          public void MediaPrecoAviao()
          {
+             for (int i = 0; i < aviaoPreco.Length; i++)
+             {
+                 somaPrecoAvioes = somaPrecoAvioes + aviaoPreco[atual];
+             }
              double mediaPrecoAvioes = somaPrecoAvioes / atual;
              Console.WriteLine("Média de preço de aviões: " + mediaPrecoAvioes);
          }
 
-         public void MediaAnosCarros()
+         public void MediaAnosAviao()
          {
+             for (int i = 0; i < aviaoAno.Length; i++)
+             {
+                 somaAnoFabricacaoAvioes = somaAnoFabricacaoAvioes + aviaoAno[i];
+             }
              double mediaAnosAviao = somaAnoFabricacaoAvioes / atual;
              Console.WriteLine("Média de ano de fabricação dos aviões: " + mediaAnosAviao);
          }
 
          public void MediaPesosAviao()
          {
+             for (int i = 0; i < aviaoPeso.Length; i++)
+             {
+                 somaPesoAvioes = somaPesoAvioes + aviaoPeso[i];
+             }
              double mediaPesosAviao = somaPesoAvioes / atual;
              Console.WriteLine("Média de pesos dos aviões: " + mediaPesosAviao);
          }
