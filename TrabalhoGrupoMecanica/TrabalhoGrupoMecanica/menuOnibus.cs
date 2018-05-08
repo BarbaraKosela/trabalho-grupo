@@ -20,6 +20,10 @@ namespace TrabalhoGrupoMecanica
         double onibusMaiorPreco = double.MinValue;
         double onibusMenorPreco = double.MaxValue;
         int atual = 0;
+        double somaPrecoOnibus = 0, somaPesoOnibus = 0, somaAnoFabricacaoOnibus = 0;
+
+       
+       
 
     public void CadastrarOnibus()
     {
@@ -117,7 +121,7 @@ namespace TrabalhoGrupoMecanica
             {
                 try
                 {
-                    Console.Write("Digite o peso da moto: ");
+                    Console.Write("Digite o peso da ônibus: ");
                     onibusPeso[atual] = Convert.ToDouble(Console.ReadLine());
                     if (onibusPeso[atual] > 0)
                     {
@@ -154,6 +158,7 @@ namespace TrabalhoGrupoMecanica
                 {
                     Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
                 }
+
             }
 
             Console.Clear();
@@ -272,7 +277,7 @@ namespace TrabalhoGrupoMecanica
                 {
                     try
                     {
-                        Console.Write("Digite o peso da moto: ");
+                        Console.Write("Digite o peso da ônibus: ");
                         onibusPeso[posicao] = Convert.ToDouble(Console.ReadLine());
                         if (onibusPeso[posicao] > 0)
                         {
@@ -309,6 +314,7 @@ namespace TrabalhoGrupoMecanica
                     {
                         Console.WriteLine("Quantidade de passageiros invalida, digite novamente");
                     }
+
                 }
 
 
@@ -322,6 +328,11 @@ namespace TrabalhoGrupoMecanica
         {
             Console.WriteLine("Registro nao encontrado");
         }
+        Console.Clear();
+        somaPrecoOnibus = somaPrecoOnibus + onibusPreco[atual];
+        somaPesoOnibus = somaPesoOnibus + onibusPeso[atual];
+        somaAnoFabricacaoOnibus = somaAnoFabricacaoOnibus + onibusAno[atual];
+        atual++;
     }
 
     public void ListarOnibus()
@@ -362,53 +373,94 @@ namespace TrabalhoGrupoMecanica
 
     public void TotalOnibus()
     {
-        Console.WriteLine("O total dos ônibus é: ");
-        atual++;
+        Console.WriteLine("O total dos ônibus é: " + atual);
+        
     }
 
     public void MediaPrecoOnibus()
     {
-
+        double mediaPrecoOnibus = somaPrecoOnibus / atual;
+        Console.Clear();
+        Console.WriteLine("Média de preço de ônibus: " + mediaPrecoOnibus);
     }
 
     public void MediaAnosOnibus()
     {
-
+        double mediaAnosOnibus = somaAnoFabricacaoOnibus / atual;
+        Console.Clear();
+        Console.WriteLine("Média de ano de fabricação dos ônibus: " + mediaAnosOnibus);
     }
 
     public void MediaPesosOnibus()
     {
-
+        double mediaPesosOnibus = somaPesoOnibus / atual;
+        Console.Clear();
+        Console.WriteLine("Média de pesos dos ônibus: " + mediaPesosOnibus);
     }
 
     public void OnibusComMaiorPreco()
     {
+        for (int i = 0; i < onibusPreco.Length; i++)
+        {
 
+            if (onibusPreco[i] > onibusMaiorPreco)
+            {
+                onibusMaiorPreco = onibusPreco[i];
+            }
+            Console.Clear();
+            Console.WriteLine("Preço do ônibus mais caro: " + onibusMaiorPreco);
+        }
     }
 
     public void OnibusMaiorAnoFabricacao()
     {
+        if (onibusAno[atual] > onibusMaiorAnoFabricacao)
+        {
+            onibusMaiorAnoFabricacao = onibusAno[atual];
 
+        }
+        Console.Clear();
+        Console.WriteLine("Ano de fabricação mais recente: " + onibusMaiorAnoFabricacao);
     }
 
     public void OnibusComMaiorPeso()
     {
-
+        if (onibusPeso[atual] > onibusMaiorPeso)
+        {
+            onibusMaiorPeso = onibusPeso[atual];
+        }
+        Console.Clear();
+        Console.WriteLine("Peso do ônibus mais pesado: " + onibusMaiorPeso);
     }
 
     public void OnibusComMenorPreco()
     {
-
+        if (onibusPreco[atual] < onibusMenorPreco)
+        {
+            onibusMenorPreco = onibusPreco[atual];
+        }
+        Console.Clear();
+        Console.WriteLine("Preço do ônibus mais barato: " + onibusMenorPreco);
     }
 
     public void OnibusComMenorAnoFabricacao()
     {
-
+        if (onibusAno[atual] < onibusMenorAnoFabricacao)
+        {
+            onibusMenorAnoFabricacao = onibusAno[atual];
+        }
+        Console.Clear();
+        Console.WriteLine("Ano de fabricação menos recente: " + onibusMenorAnoFabricacao);
     }
 
     public void OnibusComMenorPeso()
     {
-
+        if (onibusPeso[atual] < onibusMenorPeso)
+        {
+            onibusMenorPeso = onibusPeso[atual];
+        }
+        Console.Clear();
+        Console.WriteLine("Preço do ônibus mais barato: " + onibusMenorPeso);
     }
 
     public void ApagarMenuOnibus()

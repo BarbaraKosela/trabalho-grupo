@@ -350,7 +350,7 @@ namespace TrabalhoGrupoMecanica
 
         public void TotalCarros()
         {
-            //Console.Clear();
+            Console.Clear();
             //int totalCarros = modeloCarros[atual].Length;
             Console.WriteLine("Total de carros " + atual);
             
@@ -359,12 +359,14 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPrecoCarros()
         {
+            Console.Clear();
             double mediaPreco = somaPrecoCarros / atual;
             Console.WriteLine("Média de preçifo dos carros: " + mediaPreco);
         }
 
         public void MediaAnosCarros()
         {
+            Console.Clear();
             int mediaAnosCarros = somaAnoFabricacao / atual;
             Console.WriteLine("Média ano dos carros: " + mediaAnosCarros);
             
@@ -372,6 +374,7 @@ namespace TrabalhoGrupoMecanica
 
         public void MediaPesosCarros()
         {
+            Console.Clear();
             double mediaPesosCarros = somaPesoCarros / atual;
             Console.WriteLine("Média peso dos carros: " + mediaPesosCarros);
         }
@@ -382,6 +385,7 @@ namespace TrabalhoGrupoMecanica
             {
                 maiorPrecoCarro = precoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Preço do carro mais caro: " + maiorPrecoCarro);
         }
 
@@ -391,6 +395,7 @@ namespace TrabalhoGrupoMecanica
             {
                 maiorAnoFabricacao = anoFabricacaoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Ano de fabricação mais recente: " + maiorAnoFabricacao);
         }
 
@@ -400,6 +405,7 @@ namespace TrabalhoGrupoMecanica
             {
                 maiorPesoCarro = pesoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Peso do carro mais pesado: " + maiorPesoCarro);
         }
 
@@ -409,6 +415,7 @@ namespace TrabalhoGrupoMecanica
             {
                 menorPrecoCarro = precoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
         }
 
@@ -418,6 +425,7 @@ namespace TrabalhoGrupoMecanica
             {
                 menorAnoFabricacao = anoFabricacaoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Ano de fabricação menor recente: " + menorAnoFabricacao);
         }
 
@@ -427,6 +435,7 @@ namespace TrabalhoGrupoMecanica
             {
                 menorPrecoCarro = pesoCarros[atual];
             }
+            Console.Clear();
             Console.WriteLine("Preço do carro mais barato: " + menorPrecoCarro);
         }
 

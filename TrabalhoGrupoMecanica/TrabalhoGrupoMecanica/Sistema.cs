@@ -20,7 +20,7 @@ namespace TrabalhoGrupoMecanica
         public void Menu()
         {
             Console.WriteLine("O que deseja cadastrar?\n");
-            Console.WriteLine(@"1 - carros
+            Console.WriteLine(@"1 - Carros
 2 - Bicicletas
 3 - Motos
 4 - Aviões
@@ -444,12 +444,12 @@ namespace TrabalhoGrupoMecanica
 6 - Média de preço dos caminhões
 7 - Média de anos dos caminhões
 8 - Média de pesos dos caminhões
-9 - caminhão com maior preço
-10 - caminhão com maior ano de fabricação
-11 - caminhão com maior peso
-12 - caminhão com menor preço
-13 - caminhão com menor ano de fabricação
-14 - caminhão com menor peso
+9 - Caminhão com maior preço
+10 - Caminhão com maior ano de fabricação
+11 - Caminhão com maior peso
+12 - Caminhão com menor preço
+13 - Caminhão com menor ano de fabricação
+14 - Caminhão com menor peso
 15 - Sair");
                         validarNumeroMenu = true;
                         while (validarNumeroMenu == true)
@@ -535,12 +535,12 @@ namespace TrabalhoGrupoMecanica
 6 - Média de preço dos ônibus
 7 - Média de anos dos ônibus
 8 - Média de pesos dos ônibus
-9 - ônibus com maior preço
-10 - ônibus com maior ano de fabricação
-11 - ônibus com maior peso
-12 - ônibus com menor preço
-13 - ônibus com menor ano de fabricação
-14 - ônibus com menor peso
+9 - Ônibus com maior preço
+10 - Ônibus com maior ano de fabricação
+11 - Ônibus com maior peso
+12 - Ônibus com menor preço
+13 - Ônibus com menor ano de fabricação
+14 - Ônibus com menor peso
 15 - Sair");
 
                         validarNumeroMenu = true;
